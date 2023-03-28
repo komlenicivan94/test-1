@@ -156,16 +156,6 @@ input.result {
     column-gap: 10px;
 }
 
-/*.bottom-section-inner .row {
-    transition: 1s ease width;
-    width: 150px;
-	position: relative;
-}
-
-.bottom-section-inner .row.mb-4.justify-content-between {
-    width: 100%;
-}*/
-
 .button {
     background: #0b1168;
     border: 2px solid #fff;
@@ -177,22 +167,12 @@ input.result {
     font-size: 20px;
     text-transform: uppercase;
     font-weight: 500;
-	-webkit-appearance: none;
 	cursor: pointer;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-	/*position: absolute;
-    left: 0;
-    right: 0;*/
 }
-
-/*.bottom-section-inner .row.mb-4.justify-content-between .button {
-    position: relative;
-    left: unset;
-    right: unset;
-}*/
 
 @media (max-width: 767px) {
 .player-image-box {
