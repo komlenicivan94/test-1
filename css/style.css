@@ -133,6 +133,10 @@ input.result {
     min-width: 120px;
     height: 55px;
     text-align: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 	
@@ -183,10 +187,6 @@ input.result {
     right: 0;*/
 }
 
-.solve.done {
-    pointer-events: none;
-}
-
 /*.bottom-section-inner .row.mb-4.justify-content-between .button {
     position: relative;
     left: unset;
@@ -227,7 +227,7 @@ section.numbers-section .row {
 }
 	
 .results-section-bottom {
-	min-height: 130px;
+	min-height: 90px;
 }
 
 .user-number-box {
@@ -241,6 +241,12 @@ section.numbers-section .row {
     order: -1;
     width: 100%;
     text-align: center;
+    font-size: 26px;
+    line-height: 36px;
+}
+
+input.result {
+    font-size: 27px;
 }
 	
 .bottom-section-inner {
