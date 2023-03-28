@@ -113,6 +113,7 @@ input.result {
 
 .message-box {
    	margin-bottom: 10px;
+    display: none;
 }
 
 .result-line {
@@ -120,7 +121,7 @@ input.result {
     display: flex;
 	align-items: center;
 	flex-wrap: wrap;
-    row-gap: 10px;
+    row-gap: 12px;
 }
 
 .user-number-box {

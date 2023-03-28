@@ -48,7 +48,7 @@ $('.play').click(function() {
 		$('.bottom-section .row').removeClass('justify-content-between').addClass('justify-content-center');
 		$('.number-box').text('').removeClass('done');
 		$('.result').val('');
-		$('.result-box, .result-box-message, .js-result-box, .error-box-message, .pc-results-all-box-message, .js-number, .user-number').empty();
+		$('.result-box, .js-result-box, .error-box-message, .pc-results-all-box-message, .js-number, .user-number').empty();
 	} else if ($('.number-box.done').length < 1 && !$(this).hasClass('started')) {
 		myNumber = new MyNumber();
 		$(this).text('Stop').addClass('started');
@@ -143,8 +143,9 @@ $('.submit').click(function() {
 		var result = eval($('.result').val().split(' =')[0]);
 		var numberFound = '';
 		
-		$('.result-box-message, .error-box-message, .pc-results-all-box-message, .user-number').empty();
+		$('.error-box-message, .pc-results-all-box-message, .user-number').empty();
 		if (dontexist.length > 0 || usedTooManyTimes.length > 0) {
+			$('.message-box').show();
 			$('.error-box-message').append(dontexist, usedTooManyTimes);
 		} else if (targetResult === result) {
 			//numberFound = ' = Tačan Broj';
