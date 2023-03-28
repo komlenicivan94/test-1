@@ -252,7 +252,8 @@ input.result {
 }
 
 .message-box {
-    margin-bottom: 3px;
+    margin-bottom: 0px;
+    padding-bottom: 10px;
 }
 
 .error-box-message p {
