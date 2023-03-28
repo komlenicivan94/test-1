@@ -170,7 +170,9 @@ $('.solve:not(.done)').click(function() {
 	$(this).addClass('done');
 	$('.js-number').text(eval(myNumber.solve().best.toString().replaceAll('×','*')));
 	$('.js-result-box').text(myNumber.solve().best.toString().replaceAll('×','*').replaceAll(' ','') + ' = ' + eval(myNumber.solve().best.toString().replaceAll('×','*')));
-})
+}).ondblclick = function(e) {
+    e.preventDefault();
+}
 
 
 
