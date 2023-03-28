@@ -248,6 +248,15 @@ section.numbers-section .row {
 
 input.result {
     font-size: 27px;
+    line-height: 35px;
+}
+
+.message-box {
+    margin-bottom: 3px;
+}
+
+.error-box-message p {
+    margin-top: 5px;
 }
 	
 .bottom-section-inner {
