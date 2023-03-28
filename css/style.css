@@ -145,6 +145,11 @@ input.result {
     margin: 12px 42px;
 }
 
+.btn-flex-box {
+    display: flex;
+    column-gap: 10px;
+}
+
 /*.bottom-section-inner .row {
     transition: 1s ease width;
     width: 150px;
@@ -235,6 +240,11 @@ section.numbers-section .row {
 	
 .bottom-section-inner {
     margin: 12px 0;
+}
+
+.bottom-section-inner .row {
+    justify-content: center !important;
+    row-gap: 10px;
 }
 }
 
