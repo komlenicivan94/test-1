@@ -110,7 +110,7 @@ input.result {
     flex-direction: column;
     justify-content: flex-end;
 }
-
+ 
 .message-box {
    	margin-bottom: 10px;
     display: none;
