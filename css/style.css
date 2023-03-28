@@ -171,6 +171,7 @@ input.result {
     font-size: 20px;
     text-transform: uppercase;
     font-weight: 500;
+	-webkit-appearance: none;
 	cursor: pointer;
     -webkit-user-select: none;
     -moz-user-select: none;
