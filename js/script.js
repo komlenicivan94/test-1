@@ -151,7 +151,7 @@ $('.submit').click(function() {
 			//numberFound = ' = Tačan Broj';
 		} else {
 			//$('.result-box-message').text('Nije tačan');
-
+			$('.message-box').show();
 		}
 		if (result !== undefined) {
 			$('.user-number').text(result);
