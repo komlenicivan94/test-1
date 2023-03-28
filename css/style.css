@@ -183,6 +183,10 @@ input.result {
     right: 0;*/
 }
 
+.solve.done {
+    pointer-events: none;
+}
+
 /*.bottom-section-inner .row.mb-4.justify-content-between .button {
     position: relative;
     left: unset;
