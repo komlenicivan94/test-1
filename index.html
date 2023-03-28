@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Moj Broj</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<section class="top-section">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="player-image-box blue-player"></div>
+				<div class="time-box">
+					<div class="timebox-bar">
+						<div class="timebox-bar-progress"></div>
+					</div>
+				</div>
+				<div class="player-image-box red-player"></div>
+			</div>
+		</div>
+	</section>
+	<section class="numbers-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="main-number-box number-flex-box">
+					<div class="number-box"></div>
+					<div class="number-box"></div>
+					<div class="number-box"></div>
+				</div>
+			</div>
+			<div class="row justify-content-between">
+				<div class="single-numbers-box number-flex-box">
+					<div class="number-box"></div>
+					<div class="number-box"></div>
+					<div class="number-box"></div>
+					<div class="number-box"></div>
+				</div>
+				<div class="middle-number-box number-flex-box">
+					<div class="number-box"></div>
+				</div>
+				<div class="big-number-box number-flex-box">
+					<div class="number-box"></div>
+				</div>
+			</div>
+		</div>        
+    </section>
+	<section class="results-section">
+		<div class="container">
+			<div class="results-section-inner">
+				<input class="result" type="text-area">
+				<div class="results-section-bottom">
+					<div class="message-box">
+						<p class="text-center result-box-message"></p>
+						<div class="text-center error-box-message"></div>
+						<div class="text-center pc-results-all-box-message"></div>
+					</div>
+					<div class="result-line justify-content-between">
+						<div class="user-number-box user-number"></div>
+						<div class="js-result-box"></div>
+						<div class="user-number-box js-number"></div>
+					</div>
+				</div>
+			</div>
+		</div>	
+    </section>
+	<section class="bottom-section">
+		<div class="container">
+			<div class="bottom-section-inner">
+				<div class="row justify-content-center mb-4">
+					<button class="submit button d-none">Potvrdi</button>
+					<div>
+						<button class="solve button d-none">Rešenje</button>
+						<button class="play button">Igraj</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> 
+    <script src="js/number-solver.js" type="text/javascript"></script>
+	<script src="js/script.js" type="text/javascript"></script>
+</body>
+</html>
