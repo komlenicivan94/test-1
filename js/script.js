@@ -33,7 +33,6 @@ document.ondblclick = function(e) {
 }
 
 
-
 var intervalId;
 var myNumber;
 $('.play').click(function() {
