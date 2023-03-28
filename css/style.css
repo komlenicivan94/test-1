@@ -145,7 +145,7 @@ input.result {
     margin: 12px 42px;
 }
 
-.btn-flex-box {
+.btn-flex-box { 
     display: flex;
     column-gap: 10px;
 }
