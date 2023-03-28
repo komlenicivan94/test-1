@@ -28,6 +28,12 @@ sredi vreme  - progress bar
 
 sredi logic za vreme
 */
+document.ondblclick = function(e) {
+    e.preventDefault();
+}
+
+
+
 var intervalId;
 var myNumber;
 $('.play').click(function() {
