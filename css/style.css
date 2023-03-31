@@ -254,8 +254,8 @@ section.numbers-section .row {
     width: 100%;
     text-align: center;
     font-size: 26px;
-    line-height: 36px;
-    height: 36px;
+    line-height: 30px;
+    min-height: 36px;
 }
 
 input.result { 
