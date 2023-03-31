@@ -197,7 +197,7 @@ button.keyboard-btn-half-width {
     display: flex;
     column-gap: 2px;
     row-gap: 2px;
-    flex-wrap: wrap;
+    flex-wrap: wrap; 
 }
 
 section.keyboard-section {
