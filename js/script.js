@@ -176,6 +176,10 @@ $('.solve:not(.done)').click(function() {
 }
 
 
-$('.keyboard-btn').click(function() {
+$('.keyboard-btn:not(.keyboard-clear)').click(function() {
 	$('.result').val($('.result').val() + $(this).text());
+});
+
+$('.keyboard-clear').click(function() {
+	$('.result').val($('.result').val().substring(0, $('.result').val().length-1));
 });
