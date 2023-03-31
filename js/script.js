@@ -176,4 +176,6 @@ $('.solve:not(.done)').click(function() {
 }
 
 
-
+$('.keyboard-btn').click(function() {
+	$('.result').val($('.result').val() + $(this).text());
+});
