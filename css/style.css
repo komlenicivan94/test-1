@@ -186,13 +186,12 @@ button.keyboard-btn {
     background: #0b1168;
     color: #fff;
     line-height: 35px;
+    padding: 0;
     padding-bottom: 5px;
 }
 
 button.keyboard-btn-half-width {
     width: 12.5%;
-    max-width: 12.5%;
-    min-width: 12.5%;
 }
 
 .keyboard-flex-box {
