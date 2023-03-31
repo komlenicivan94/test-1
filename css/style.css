@@ -170,10 +170,10 @@ input.result {
     text-transform: uppercase;
     font-weight: 500;
 	cursor: pointer;
-    -webkit-user-select: none;
+    /*-webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    user-select: none;
+    user-select: none;*/
 }
 
 
