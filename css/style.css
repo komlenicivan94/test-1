@@ -179,6 +179,8 @@ input.result {
 button.keyboard-btn {
     font-size: 25px;
     width: 25%;
+    max-width: 25%;
+    min-width: 25%;
     border-radius: 5px;
     -webkit-appearance: none;
     background: #0b1168;
@@ -189,6 +191,8 @@ button.keyboard-btn {
 
 button.keyboard-btn-half-width {
     width: 12.5%;
+    max-width: 12.5%;
+    min-width: 12.5%;
 }
 
 .keyboard-flex-box {
