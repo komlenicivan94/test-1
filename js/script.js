@@ -86,7 +86,7 @@ $('.play').click(function() {
 		clearInterval(intervalId);
 		bigNumber.eq(0).text(myNumber.values.toString().split(',')[0]).addClass('done');
 		$(this).text('Restart').addClass('restart').removeClass('started');
-		$('.result').focus();
+		//$('.result').focus();
 		$('.submit, .solve').removeClass('d-none');
 		$('.bottom-section .row').addClass('justify-content-between').removeClass('justify-content-center');
 	} 
