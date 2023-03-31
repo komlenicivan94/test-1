@@ -187,6 +187,10 @@ button.keyboard-btn {
     padding-bottom: 5px;
 }
 
+button.keyboard-btn-half-width {
+    width: 12.5%;
+}
+
 .keyboard-flex-box {
     display: flex;
 }
