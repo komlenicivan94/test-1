@@ -178,7 +178,7 @@ input.result {
 /*Keyboard*/
 button.keyboard-btn {
     font-size: 25px;
-    width: 25%;
+    width: calc(25% - 2px);
     border-radius: 5px;
     -webkit-appearance: none;
     background: #0b1168;
@@ -186,14 +186,18 @@ button.keyboard-btn {
     line-height: 35px;
     padding: 0;
     padding-bottom: 5px;
+    border: 1px solid #fff;
 }
 
 button.keyboard-btn-half-width {
-    width: 12.5%;
+    width: calc(12.5% - 2px);
 }
 
 .keyboard-flex-box {
     display: flex;
+    column-gap: 2px;
+    row-gap: 2px;
+    flex-wrap: wrap;
 }
 
 section.keyboard-section {
