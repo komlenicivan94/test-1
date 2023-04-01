@@ -357,6 +357,11 @@ input.result {
 section.bottom-section:not(.d-md-none) .bottom-section-inner .row {
     justify-content: center !important;
 }
+
+button.keyboard-btn {
+    line-height: 40px;
+    padding-bottom: 0;
+}
 }
 
 .player-image-box.blue-player {
