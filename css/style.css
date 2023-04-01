@@ -301,6 +301,10 @@ input.result {
     margin-top: 2px;
 }
 
+.bottom-section-inner {
+    margin: 0;
+}
+
 section.bottom-section:not(.d-md-none) .bottom-section-inner .row {
     justify-content: center !important;
 }
