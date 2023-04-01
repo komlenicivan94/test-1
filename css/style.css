@@ -126,10 +126,6 @@ input.result {
     flex-direction: column;
     justify-content: flex-end;
 }
- 
-.message-box {
-
-}
 
 .result-line {
     width: 100%;
