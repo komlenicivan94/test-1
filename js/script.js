@@ -52,6 +52,7 @@ $('.play').click(function() {
 	var bigNumber = $('.big-number-box .number-box:not(.done)');
 	if ($(this).hasClass('restart')) {
 		$(window).scrollTop(0);
+		$('.keyboard-section').removeClass('show');
 		$('.solve').removeClass('done');
 		$(this).text('Igraj').removeClass('restart');
 		$('.submit, .solve').addClass('d-none');
@@ -97,6 +98,7 @@ $('.play').click(function() {
 		bigNumber.eq(0).text(myNumber.values.toString().split(',')[0]).addClass('done');
 		$(this).text('Restart').addClass('restart').removeClass('started');
 		//$('.result').focus();
+		$('.keyboard-section').addClass('show');
 		$('.submit, .solve').removeClass('d-none');
 		$('.bottom-section .row').addClass('justify-content-between').removeClass('justify-content-center');
 	} 
