@@ -198,5 +198,4 @@ $('.keyboard-clear').click(function() {
 	} else {
 		$('.result').val($('.result').val().substring(0, $('.result').val().length-1));
 	}
-	//$('.result').val($('.result').val().split(' =')[0].substring(0, $('.result').val().split(' =')[0].length-1));
 });
