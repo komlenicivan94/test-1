@@ -145,17 +145,7 @@ $('.submit').click(function() {
 				dontexist.push('<p>Upotrebili ste broj ' + usedNumbers[i] + ' koji ne postoji u ponuđenim brojevima</p>');
 			}
 		}
-		
-		
-		/*var allS = [];
-		for (let i = 0; i < myNumber.solve().bestSort.length; i++) {
-			if (myNumber.solve().bestSort[i].toString() !== myNumber.solve().best.toString()) {
-				allS.push('<p>'+myNumber.solve().bestSort[i].toString()+' = '+eval(myNumber.solve().bestSort[i].toString().replaceAll('×','*'))+'</p>');
-			}
-		}
-		$('.pc-results-all-box-message').append(allS);*/
-		
-		
+	
 		var result = eval($('.result').val().split(' =')[0]);
 		var numberFound = '';
 		
@@ -173,9 +163,7 @@ $('.submit').click(function() {
 			$('.user-number').text(result.toFixed(2).replace('.00',''));
 			$('.result').val($('.result').val().split(' =')[0]+ ' = ' + result.toFixed(2).replace('.00','') + numberFound);
 		}
-		
-		
-		$('.pc-results-all-box-message').append(allS);
+				
 	}
 	catch(err) {
 		$('.error-box-message').html('<p>Greska u matematičkom izrazu!</p>');
@@ -195,7 +183,7 @@ function function1() {
 	$('.js-result-box').text(myNumber.solve().best.toString().replaceAll('×','*').replaceAll(' ','') + ' = ' + eval(myNumber.solve().best.toString().replaceAll('×','*'))).addClass('done');	
 }
 function function2() {
-	$('.solve').removeClass('loading').addClass('show-all').text('Još Rešenja');
+	$('.solve').removeClass('loading').addClass('show-all').text('Još');
 	console.log('sad')
 }
 
