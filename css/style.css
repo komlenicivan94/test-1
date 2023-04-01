@@ -94,7 +94,7 @@ section.numbers-section .row {
     background: #0b1168;
     border-radius: 7px;
     position: relative;
-    margin: 12px 42px;
+    margin: 12px 42px 15px;
     padding: 5px 20px 12px;
     border: 2px solid #fff;
     box-shadow: 0 0 0 2px #0b1168;
@@ -154,7 +154,7 @@ input.result {
 
 /*Bottom section*/
 .bottom-section-inner {
-    margin: 12px 42px;
+    margin: 0 42px;
 }
 
 .btn-flex-box { 
