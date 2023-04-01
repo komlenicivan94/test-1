@@ -166,8 +166,8 @@ $('.submit').click(function() {
 			$('.message-box').show();
 		}
 		if (result !== undefined) {
-			$('.user-number').text(result);
-			$('.result').val($('.result').val().split(' =')[0]+ ' = ' + result + numberFound);
+			$('.user-number').text(result.toFixed(2).replace('.00',''));
+			$('.result').val($('.result').val().split(' =')[0]+ ' = ' + result.toFixed(2).replace('.00','') + numberFound);
 		}
 		
 		
@@ -181,8 +181,8 @@ $('.submit').click(function() {
 
 $('.solve:not(.done)').click(function() {
 	$(this).addClass('done');
-	$('.js-number').text(eval(myNumber.solve().best.toString().replaceAll('×','*')).toFixed(2).replace('.00',''));
-	$('.js-result-box').text(myNumber.solve().best.toString().replaceAll('×','*').replaceAll(' ','') + ' = ' + eval(myNumber.solve().best.toString().replaceAll('×','*')).toFixed(2).replace('.00',''));
+	$('.js-number').text(eval(myNumber.solve().best.toString().replaceAll('×','*')));
+	$('.js-result-box').text(myNumber.solve().best.toString().replaceAll('×','*').replaceAll(' ','') + ' = ' + eval(myNumber.solve().best.toString().replaceAll('×','*')));
 }).ondblclick = function(e) {
     e.preventDefault();
 }
