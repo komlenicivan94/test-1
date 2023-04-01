@@ -21,7 +21,7 @@ class MyNumber {
      * @param {number[]} littleOnes Array of the little numbers to choose from.
      */
     constructor(target, numBigOnes, numMiddleOnes, numSelections, bigOnes, middleOnes, littleOnes) {
-        if (target == null) target = this.random(999);
+        if (target == null) target = this.random(1000,1);
         if (numBigOnes == null) numBigOnes = 1;
 		if (numMiddleOnes == null) numMiddleOnes = 1;
         if (numSelections == null) numSelections = 6;
@@ -78,8 +78,9 @@ class MyNumber {
     }
 
     /** Choose a random integer from 0 to n-1. */
-    random(n) {
-        return Math.floor(Math.random() * Math.floor(n));
+    random(min, max) {
+        //return Math.floor(Math.random() * Math.floor(n));
+        return Math.floor(Math.random() * (max-min) + min);
     }
 
     /** Randomize the elements in an array. */
