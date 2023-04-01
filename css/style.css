@@ -109,11 +109,6 @@ input.result {
 	font-style: italic;
 	width: 100%;
     padding: 1px 2px;
-    pointer-events: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
     -webkit-appearance: none;
     appearance: none;
 }	
@@ -294,6 +289,11 @@ section.numbers-section .row {
 input.result { 
     font-size: 27px;
     line-height: 35px;
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .message-box {
