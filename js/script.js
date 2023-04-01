@@ -60,7 +60,7 @@ $('.play').click(function() {
 		$('.bottom-section .row').removeClass('justify-content-between').addClass('justify-content-center');
 		$('.number-box').text('').removeClass('done');
 		$('.result').val('');
-		$('.result-box, .js-result-box, .error-box-message, .pc-results-all-box-message, .js-number, .user-number').empty();
+		$('.result-box, .js-result-box, .error-box-message, .js-number, .user-number').empty();
 	} else if ($('.number-box.done').length < 1 && !$(this).hasClass('started')) {
 		myNumber = new MyNumber();
 		$(this).text('Stop').addClass('started');
@@ -120,7 +120,7 @@ $('.result').on("focus change keyup paste keypress", function() {
 			$(this).val($(this).val().split(' =')[0].replace(input[i],''));
 		}
 	}
-	$('.error-box-message, .pc-results-all-box-message, .user-number').empty();
+	$('.error-box-message, .user-number').empty();
 });
 
 
@@ -149,7 +149,7 @@ $('.submit').click(function() {
 		var result = eval($('.result').val().split(' =')[0]);
 		var numberFound = '';
 		
-		$('.error-box-message, .pc-results-all-box-message, .user-number').empty();
+		$('.error-box-message, .user-number').empty();
 		if (dontexist.length > 0 || usedTooManyTimes.length > 0) {
 			$('.message-box').show();
 			$('.error-box-message').append(dontexist, usedTooManyTimes);
@@ -171,49 +171,11 @@ $('.submit').click(function() {
 	}
 })
 
-/*$('.solve:not(.done)').click(function() {
+$('.solve:not(.done)').click(function() {
 	$(this).addClass('done');
 	$('.js-number').text(eval(myNumber.solve().best.toString().replaceAll('×','*')));
 	$('.js-result-box').text(myNumber.solve().best.toString().replaceAll('×','*').replaceAll(' ','') + ' = ' + eval(myNumber.solve().best.toString().replaceAll('×','*'))).addClass('done');
-});*/
-/*start*/
-function function1() {
-	$('.solve').addClass('loading');
-	$('.js-number').text(eval(myNumber.solve().best.toString().replaceAll('×','*')));
-	$('.js-result-box').text(myNumber.solve().best.toString().replaceAll('×','*').replaceAll(' ','') + ' = ' + eval(myNumber.solve().best.toString().replaceAll('×','*'))).addClass('done');	
-}
-function function2() {
-	$('.solve').removeClass('loading').addClass('show-all').text('Još');
-	console.log('sad')
-}
-
-function function3() {
-	$('.solve').addClass('loading').removeClass('show-all');
-	var allS = [];
-	for (let i = 0; i < myNumber.solve().bestSort.length; i++) {
-		if (myNumber.solve().bestSort[i].toString() !== myNumber.solve().best.toString()) {
-			allS.push('<p>'+myNumber.solve().bestSort[i].toString()+' = '+eval(myNumber.solve().bestSort[i].toString().replaceAll('×','*'))+'</p>');
-		}
-	}
-	$('.pc-results-all-box-message').append(allS);
-}
-function function4() {
-	$('.solve').removeClass('loading').addClass('done').text('Thats all');
-	console.log('sad2')
-}
-
-$('.solve').click(function() {
-	if ( !$(this).hasClass('done')) {
-		if ($(this).hasClass('show-all')) {
-			$.when(function3()).then(function4());
-		} else {
-			$.when(function1()).then(function2());
-		}
-	}
 });
-
-
-/*end*/
 
 $('.keyboard-btn:not(.keyboard-clear)').click(function() {
 	$('.result').val($('.result').val().split(' =')[0] + $(this).text());
@@ -225,5 +187,5 @@ $('.keyboard-clear').click(function() {
 	} else {
 		$('.result').val($('.result').val().substring(0, $('.result').val().length-1));
 	}
-	$('.error-box-message, .pc-results-all-box-message, .user-number').empty();
+	$('.error-box-message, .user-number').empty();
 });
