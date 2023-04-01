@@ -194,15 +194,20 @@ button.keyboard-btn {
     font-size: 25px;
     width: calc(25% - 2px);
     border-radius: 5px;
-    -webkit-appearance: none;
-    appearance: none;
-    user-select: none;;
     background: #0b1168;
     color: #fff;
     line-height: 35px;
     padding: 0;
     padding-bottom: 5px;
     border: 1px solid #fff;
+    -webkit-appearance: none;
+    appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 button.keyboard-btn-half-width {
