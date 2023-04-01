@@ -150,6 +150,19 @@ input.result.done {
     user-select: none;
 }
 
+.user-number.correct {
+    border-color: green;
+    box-shadow: 0 0 0 1px green;
+}
+
+.user-number.false {
+    border-color: red;
+    box-shadow: 0 0 0 1px red;
+}
+
+.js-number.done {
+    border-width: 3px;
+}
 	
 .js-result-box {
     font-size: 30px;
@@ -169,7 +182,7 @@ input.result.done {
 .button {
     background: #0b1168;
     border: 2px solid #fff;
-    border-radius: 3px;
+    border-radius: 4px;
     box-shadow: 0 0 0 2px #0b1168;
     color: #fff;
     width: 150px;

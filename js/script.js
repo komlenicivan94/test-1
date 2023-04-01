@@ -6,8 +6,6 @@ loader na resenje
 
 effecti na buttone
 
-boje za naglasavanje user-ovog tacnog broja, najblizeg broja 
-
 ogranici width user-result-box
 
 show more results - necemo
@@ -47,7 +45,7 @@ $('.play').click(function() {
 	if ($(this).hasClass('restart')) {
 		$(window).scrollTop(0);
 		$('.keyboard-section').removeClass('show');
-		$('.solve, .js-result-box').removeClass('done');
+		$('.solve, .js-result-box, .js-number').removeClass('done');
 		$(this).text('Igraj').removeClass('restart');
 		$('.submit, .solve').addClass('d-none');
 		$('.bottom-section .row').removeClass('justify-content-between').addClass('justify-content-center');
@@ -114,6 +112,7 @@ $('.result').on("focus change keyup paste keypress", function() {
 		}
 	}
 	$('.error-box-message, .user-number').empty();
+	$('.user-number').removeClass('correct false');
 });
 
 
@@ -147,9 +146,9 @@ $('.submit').click(function() {
 			$('.message-box').show();
 			$('.error-box-message').append(dontexist, usedTooManyTimes);
 		} else if (targetResult === result) {
-			//numberFound = ' = Tačan Broj';
+			$('.user-number').removeClass('false').addClass('correct');
 		} else {
-			//$('.result-box-message').text('Nije tačan');
+			$('.user-number').removeClass('correct').addClass('false');
 			$('.message-box').show();
 		}
 		if (result !== undefined) {
@@ -166,7 +165,7 @@ $('.submit').click(function() {
 
 $('.solve:not(.done)').click(function() {
 	$(this).addClass('done');
-	$('.js-number').text(eval(myNumber.solve().best.toString().replaceAll('×','*')));
+	$('.js-number').text(eval(myNumber.solve().best.toString().replaceAll('×','*'))).addClass('done');
 	$('.js-result-box').text(myNumber.solve().best.toString().replaceAll('×','*').replaceAll(' ','') + ' = ' + eval(myNumber.solve().best.toString().replaceAll('×','*'))).addClass('done');
 });
 
