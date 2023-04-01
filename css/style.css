@@ -77,6 +77,10 @@ p {
     justify-content: center!important;
 }
 
+.d-none {
+    display: none !important;;
+}
+
 @media (min-width: 768px) {
 .d-md-none {
     display: none!important;
@@ -86,10 +90,6 @@ p {
     display: -ms-flexbox!important;
     display: flex!important;
 }
-}
-
-.d-none {
-    display: none !important;;
 }
 
 /*Top section*/
