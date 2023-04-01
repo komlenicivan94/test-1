@@ -4,6 +4,9 @@ body {
     color: #fff;
 	background: #399ffd;
     background-image: url(../img/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
     touch-action: manipulation;
 }
 	
