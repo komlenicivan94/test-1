@@ -97,7 +97,7 @@ $('.result').on("focus change keyup paste keypress", function(event) {
 	}
 	$('.error-box-message, .user-number').empty();
 	$('.user-number').removeClass('correct false');
-	if (event.key === "Enter") {
+	if (event.key === "Enter" && input !== '') {
 		$('.submit').click();
 	}
 });
@@ -132,7 +132,9 @@ $('.submit').click(function() {
 		} else if (targetResult === result) {
 			$('.user-number').removeClass('false').addClass('correct');
 		} else {
-			$('.user-number').removeClass('correct').addClass('false');
+			if (result !== '') {
+				$('.user-number').removeClass('correct').addClass('false');
+			}
 			$('.message-box').show();
 		}
 		if (result !== undefined) {
