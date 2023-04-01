@@ -209,15 +209,17 @@ function function3() {
 	$('.pc-results-all-box-message').append(allS);
 }
 function function4() {
-	$('.solve').removeClass('loading').text('Thats all');
+	$('.solve').removeClass('loading').addClass('done').text('Thats all');
 	console.log('sad2')
 }
 
 $('.solve').click(function() {
-	if ($(this).hasClass('show-all')) {
-		$.when(function3()).then(function4());
-	} else {
-		$.when(function1()).then(function2());
+	if ( !$(this).hasClass('done')) {
+		if ($(this).hasClass('show-all')) {
+			$.when(function3()).then(function4());
+		} else {
+			$.when(function1()).then(function2());
+		}
 	}
 });
 
