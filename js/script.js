@@ -193,5 +193,10 @@ $('.keyboard-btn:not(.keyboard-clear)').click(function() {
 });
 
 $('.keyboard-clear').click(function() {
-	$('.result').val($('.result').val().split(' =')[0].substring(0, $('.result').val().split(' =')[0].length-1));
+	if ($('.result').val().indexOf('=') > -1) {
+		$('.result').val($('.result').val().split(' =')[0]);
+	} else {
+		$('.result').val($('.result').val().substring(0, $('.result').val().length-1));
+	}
+	//$('.result').val($('.result').val().split(' =')[0].substring(0, $('.result').val().split(' =')[0].length-1));
 });
