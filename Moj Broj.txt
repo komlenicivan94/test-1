@@ -11,6 +11,8 @@ box velicina za vece ekrane
 
 pagespeed recommendations
 
+favicon
+
 proveri iphone 6 click - probaj .on('click touchstart')
 
 dodaj main element oko svega osim top section i dodaj min-height 100vh - top section
@@ -38,24 +40,8 @@ namesti variable za jezik
 
 
 
-dodaj classe sa bootstrap-a
+dodaj style sa bootstrap-a za class-e:
 
 container
-
-row
-
-justify-content-between
-
-justify-content-center
-
-text-center
-
-mb-4
-
-d-none
-
-d-md-flex
-
-d-md-none
 
 */

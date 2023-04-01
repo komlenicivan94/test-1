@@ -105,16 +105,12 @@ $('.submit').click(function() {
 		var numberFound = '';		
 		$('.error-box-message, .user-number').empty();
 		if (dontexist.length > 0 || usedTooManyTimes.length > 0) {
-			$('.message-box').show();
 			$('.error-box-message').append(dontexist, usedTooManyTimes);
 			$('.user-number').removeClass('correct').addClass('false');
 		} else if (targetResult === result) {
 			$('.user-number').removeClass('false').addClass('correct');
-		} else {
-			if (result !== undefined) {
-				$('.user-number').removeClass('correct').addClass('false');
-			}
-			$('.message-box').show();
+		} else if (result !== undefined) {
+			$('.user-number').removeClass('correct').addClass('false');
 		}
 		if (result !== undefined) {
 			$('.user-number').text(result.toFixed(2).replace('.00',''));
