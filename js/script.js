@@ -198,6 +198,10 @@ function function2() {
 	console.log('sad')
 }
 
+$('.solve:not(.show-all)').click(function() {
+	$.when(function1()).then(function2());	
+});
+
 function function3() {
 	var allS = [];
 	for (let i = 0; i < myNumber.solve().bestSort.length; i++) {
@@ -208,17 +212,13 @@ function function3() {
 	$('.pc-results-all-box-message').append(allS);
 }
 function function4() {
-	$('.solve.show-all').removeClass('show-all').text('Thats all');
+	$('.solve.show-all').removeClass('show-all1').text('Thats all');
 	console.log('sad2')
 }
 
-$('.solve:not(.show-all)').click(function() {
-	$.when(function1()).then(function2());
-	$('.solve.show-all').click(function() {
-		$.when(function3()).then(function4());	
-	});	
+$('.solve.show-all').click(function() {
+	$.when(function3()).then(function4());	
 });
-
 /*end*/
 
 $('.keyboard-btn:not(.keyboard-clear)').click(function() {
