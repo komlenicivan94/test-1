@@ -1,23 +1,33 @@
 /*Moj Broj
+sredi tastaturu za desktop i mobilni - grow height on click
+
+clear jednako i message na input
+
+sredi buttone
+
+loader na resenje
+
+effecti na buttone
+
+boje za naglasavanje user-ovog tacnog broja, najblizeg broja 
+
+ogranici width user-result-box
+
+show more results
+
 nadji font 
 
-input validation - boilji nacin
+input validation - bolji nacin
 
-sredi error maesage
+sredi error message
 
 zabrani input i submit pre svih brojeva i onda ga pusti
 
-restart back to top
-
-mobilni focus na input sscrol to element
+mobilni focus na input scrol to element
 
 napravi listu komentara pa zovi kad treba
 
 restart alert
-
-sredi buttone
-
-(na pocetku samo play, pa samo stop do kraja loopa, pa restart ide na desno a pojavljuje se potvrdi levo)
 
 nadji slike
 (facial expresion)
@@ -177,9 +187,9 @@ $('.solve:not(.done)').click(function() {
 
 
 $('.keyboard-btn:not(.keyboard-clear)').click(function() {
-	$('.result').val($('.result').val() + $(this).text());
+	$('.result').val($('.result').val().split(' =')[0] + $(this).text());
 });
 
 $('.keyboard-clear').click(function() {
-	$('.result').val($('.result').val().substring(0, $('.result').val().length-1));
+	$('.result').val($('.result').val().split(' =')[0].substring(0, $('.result').val().split(' =')[0].length-1));
 });

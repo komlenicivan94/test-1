@@ -170,6 +170,8 @@ input.result {
     text-transform: uppercase;
     font-weight: 500;
 	cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -183,6 +185,7 @@ button.keyboard-btn {
     width: calc(25% - 2px);
     border-radius: 5px;
     -webkit-appearance: none;
+    appearance: none;
     user-select: none;;
     background: #0b1168;
     color: #fff;
@@ -272,7 +275,7 @@ input.result {
 }
 
 .error-box-message p {
-    margin-top: 5px;
+    margin-top: 2px;
 }
 	
 .bottom-section-inner {
