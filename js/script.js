@@ -16,6 +16,8 @@ nadji pozadinu - svg ako moze
 sredi vreme  - progress bar
 
 sredi logic za vreme
+
+namesti variable za jezik
 */
 var intervalId;
 var myNumber;
@@ -84,9 +86,8 @@ function getOccurrence(array, value) {
 	return array.filter((v) => (v === value)).length;
 }
 
-/*Allowed Input*/
 var allowedInput = [' ','0','1','2','3','4','5','6','7','8','9','+','-','*','/','(',')'];
-$('.result').on("focus change keyup paste keypress", function() {
+$('.result').on("focus change keyup paste keypress", function(event) {
 	var input = $(this).val().split("");
 	for (let i = 0; i < input.length; i++) {
 		if (getOccurrence(allowedInput, input[i]) === 0) {
@@ -95,8 +96,10 @@ $('.result').on("focus change keyup paste keypress", function() {
 	}
 	$('.error-box-message, .user-number').empty();
 	$('.user-number').removeClass('correct false');
+	if (event.key === "Enter") {
+		$('.submit').click();
+	}
 });
-
 
 $('.submit').click(function() {	
 	try {
