@@ -111,7 +111,11 @@ input.result {
     padding: 1px 2px;
     -webkit-appearance: none;
     appearance: none;
-}	
+}
+
+input.result.done {
+    pointer-events: none;
+}
 
 .results-section-bottom {
 	display: flex;
@@ -181,6 +185,10 @@ input.result {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+
+button.solve.done {
+    pointer-events: none;
 }
 
 
@@ -312,14 +320,6 @@ input.result {
 section.bottom-section:not(.d-md-none) .bottom-section-inner .row {
     justify-content: center !important;
 }
-}
-
-.solve.loading {
-    background: red;
-}
-
-button.solve.done, button.solve.loading {
-    pointer-events: none;
 }
 
 .player-image-box.blue-player {

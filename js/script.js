@@ -1,7 +1,4 @@
 /*Moj Broj
-sredi tastaturu za desktop i mobilni - grow height on click
-
-clear jednako i message na input
 
 sredi buttone
 
@@ -13,7 +10,7 @@ boje za naglasavanje user-ovog tacnog broja, najblizeg broja
 
 ogranici width user-result-box
 
-show more results
+show more results - necemo
 
 nadji font 
 
@@ -38,9 +35,6 @@ sredi vreme  - progress bar
 
 sredi logic za vreme
 */
-document.ondblclick = function(e) {
-    e.preventDefault();
-}
 
 
 var intervalId;
@@ -54,12 +48,11 @@ $('.play').click(function() {
 		$(window).scrollTop(0);
 		$('.keyboard-section').removeClass('show');
 		$('.solve, .js-result-box').removeClass('done');
-		$('.solve').text('Rešenje');
 		$(this).text('Igraj').removeClass('restart');
 		$('.submit, .solve').addClass('d-none');
 		$('.bottom-section .row').removeClass('justify-content-between').addClass('justify-content-center');
 		$('.number-box').text('').removeClass('done');
-		$('.result').val('');
+		$('.result').val('').addClass('done');
 		$('.result-box, .js-result-box, .error-box-message, .js-number, .user-number').empty();
 	} else if ($('.number-box.done').length < 1 && !$(this).hasClass('started')) {
 		myNumber = new MyNumber();
@@ -99,7 +92,7 @@ $('.play').click(function() {
 		bigNumber.eq(0).text(myNumber.values.toString().split(',')[0]).addClass('done');
 		$(this).text('Restart').addClass('restart').removeClass('started');
 		if (!window.matchMedia("(pointer: coarse)").matches) {
-			$('.result').focus();
+			$('.result').focus().removeClass('done');
 		}	
 		$('.keyboard-section').addClass('show');
 		$('.submit, .solve').removeClass('d-none');
