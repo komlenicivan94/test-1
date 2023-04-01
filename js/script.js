@@ -1,18 +1,12 @@
 /*Moj Broj
 
-sredi buttone
-
-loader na resenje
-
 effecti na buttone
-
-ogranici width user-result-box
-
-show more results - necemo
 
 nadji font 
 
 input validation - bolji nacin
+
+loader na resenje
 
 sredi error message
 

@@ -163,7 +163,10 @@ input.result.done {
     line-height: 47px;
     padding: 0 10px 2px;
     min-width: 120px;
+    max-width: 50%;
     height: 55px;
+    overflow: hidden;
+    text-overflow: ellipsis;
     text-align: center;
     -webkit-user-select: none;
     -moz-user-select: none;
