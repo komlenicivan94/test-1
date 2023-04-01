@@ -195,8 +195,8 @@ $('.keyboard-btn:not(.keyboard-clear)').click(function() {
 $('.keyboard-clear').click(function() {
 	if ($('.result').val().indexOf('=') > -1) {
 		$('.result').val($('.result').val().split(' =')[0]);
-		$('.error-box-message, .pc-results-all-box-message, .user-number').empty();
 	} else {
 		$('.result').val($('.result').val().substring(0, $('.result').val().length-1));
 	}
+	$('.error-box-message, .pc-results-all-box-message, .user-number').empty();
 });
