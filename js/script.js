@@ -35,6 +35,7 @@ $('.play').click(function() {
 		$('.bottom-section .row').removeClass('justify-content-between').addClass('justify-content-center');
 		$('.number-box').text('').removeClass('done');
 		$('.result').val('').addClass('done');
+		$('.user-number').removeClass('correct false');
 		$('.result-box, .js-result-box, .error-box-message, .js-number, .user-number').empty();
 	} else if ($('.number-box.done').length < 1 && !$(this).hasClass('started')) {
 		myNumber = new MyNumber();
