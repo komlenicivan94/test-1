@@ -141,7 +141,6 @@ $('.submit').click(function() {
 	}
 	catch(err) {
 		$('.error-box-message').html('<p>Greska u matematičkom izrazu!</p>');
-		console.log(err)
 	}
 })
 
