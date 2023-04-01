@@ -181,8 +181,8 @@ $('.submit').click(function() {
 
 $('.solve:not(.done)').click(function() {
 	$(this).addClass('done');
-	$('.js-number').text(eval(myNumber.solve().best.toString().replaceAll('×','*')));
-	$('.js-result-box').text(myNumber.solve().best.toString().replaceAll('×','*').replaceAll(' ','') + ' = ' + eval(myNumber.solve().best.toString().replaceAll('×','*')));
+	$('.js-number').text(eval(myNumber.solve().best.toString().replaceAll('×','*')).toFixed(2));
+	$('.js-result-box').text(myNumber.solve().best.toString().replaceAll('×','*').replaceAll(' ','') + ' = ' + eval(myNumber.solve().best.toString().replaceAll('×','*')).toFixed(2));
 }).ondblclick = function(e) {
     e.preventDefault();
 }
