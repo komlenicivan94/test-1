@@ -3,6 +3,7 @@
 body {
     color: #fff;
 	background: #399ffd;
+    background-image: url(/test1/img/background.jpg);
     touch-action: manipulation;
 }
 	
