@@ -282,7 +282,6 @@ function consider(value, target, solns) {
     if (value.number === target) {
         solns.all.push(value);
 		solns.bestSort.push(value);
-		//solns.bestSort.filter(e=>solns.bestSort.indexOf(e)===solns.bestSort.lastIndexOf(e));
     }
 }
 
