@@ -167,6 +167,7 @@ $('.solve:not(.done)').click(function() {
 
 $('.keyboard-btn:not(.keyboard-clear)').click(function() {
 	$('.result').val($('.result').val().split(' =')[0] + $(this).text());
+	$('.user-number').removeClass('correct false');
 });
 
 $('.keyboard-clear').click(function() {
@@ -176,4 +177,5 @@ $('.keyboard-clear').click(function() {
 		$('.result').val($('.result').val().substring(0, $('.result').val().length-1));
 	}
 	$('.error-box-message, .user-number').empty();
+	$('.user-number').removeClass('correct false');
 });
