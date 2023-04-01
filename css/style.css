@@ -69,12 +69,13 @@ section.numbers-section .row {
 	background: #0b1168;
 	border-radius: 5px;
 	border: 2px solid #fff;
-    outline: 2px solid #0b1168;
+    /*outline: 2px solid #0b1168;*/
 	text-align: center;
 	line-height: 52px;
 	font-size: 50px;
 	font-weight: 700;
 	color: #fff;
+    box-shadow: 0 0 0 2px #0b1168;
 }
 
 .middle-number-box .number-box {
@@ -93,7 +94,8 @@ section.numbers-section .row {
     margin: 12px 42px;
     padding: 5px 20px 12px;
     border: 2px solid #fff;
-    outline: 2px solid #0b1168;
+    /*outline: 2px solid #0b1168;*/
+    box-shadow: 0 0 0 2px #0b1168;
 }
 
 input.result {
@@ -172,7 +174,8 @@ input.result {
     background: #0b1168;
     border: 2px solid #fff;
     border-radius: 3px;
-    outline: 2px solid #0b1168;
+    /*outline: 2px solid #0b1168;*/
+    box-shadow: 0 0 0 2px #0b1168;
     color: #fff;
     width: 150px;
 	padding: 6px 12px;
