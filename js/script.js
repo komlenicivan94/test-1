@@ -142,6 +142,7 @@ $('.submit').click(function() {
 		if (dontexist.length > 0 || usedTooManyTimes.length > 0) {
 			$('.message-box').show();
 			$('.error-box-message').append(dontexist, usedTooManyTimes);
+			$('.user-number').removeClass('correct').addClass('false');
 		} else if (targetResult === result) {
 			$('.user-number').removeClass('false').addClass('correct');
 		} else {
@@ -167,6 +168,7 @@ $('.solve:not(.done)').click(function() {
 
 $('.keyboard-btn:not(.keyboard-clear)').click(function() {
 	$('.result').val($('.result').val().split(' =')[0] + $(this).text());
+	$('.error-box-message, .user-number').empty();
 	$('.user-number').removeClass('correct false');
 });
 
