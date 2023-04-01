@@ -189,20 +189,17 @@ $('.submit').click(function() {
 });*/
 /*start*/
 function function1() {
-	$('.solve').addClass('done');
+	$('.solve').addClass('loading');
 	$('.js-number').text(eval(myNumber.solve().best.toString().replaceAll('×','*')));
 	$('.js-result-box').text(myNumber.solve().best.toString().replaceAll('×','*').replaceAll(' ','') + ' = ' + eval(myNumber.solve().best.toString().replaceAll('×','*'))).addClass('done');	
 }
 function function2() {
-	$('.solve').addClass('show-all').text('Još Rešenja');
+	$('.solve').removeClass('loading').addClass('show-all').text('Još Rešenja');
 	console.log('sad')
 }
 
-$('.solve:not(.show-all)').click(function() {
-	$.when(function1()).then(function2());	
-});
-
 function function3() {
+	$('.solve').addClass('loading').removeClass('show-all');
 	var allS = [];
 	for (let i = 0; i < myNumber.solve().bestSort.length; i++) {
 		if (myNumber.solve().bestSort[i].toString() !== myNumber.solve().best.toString()) {
@@ -212,13 +209,19 @@ function function3() {
 	$('.pc-results-all-box-message').append(allS);
 }
 function function4() {
-	$('.solve.show-all').removeClass('show-all1').text('Thats all');
+	$('.solve').removeClass('loading').text('Thats all');
 	console.log('sad2')
 }
 
-$('.solve.show-all').click(function() {
-	$.when(function3()).then(function4());	
+$('.solve').click(function() {
+	if ($(this).hasClass('show-all')) {
+		$.when(function3()).then(function4());
+	} else {
+		$.when(function1()).then(function2());
+	}
 });
+
+
 /*end*/
 
 $('.keyboard-btn:not(.keyboard-clear)').click(function() {
