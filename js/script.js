@@ -119,6 +119,7 @@ $('.result').on("focus change keyup paste keypress", function() {
 			$(this).val($(this).val().split(' =')[0].replace(input[i],''));
 		}
 	}
+	$('.error-box-message, .pc-results-all-box-message, .user-number').empty();
 });
 
 
@@ -184,9 +185,10 @@ $('.submit').click(function() {
 $('.solve:not(.done)').click(function() {
 	$(this).addClass('done');
 	$('.js-number').text(eval(myNumber.solve().best.toString().replaceAll('×','*')));
-	$('.js-result-box').text(myNumber.solve().best.toString().replaceAll('×','*').replaceAll(' ','') + ' = ' + eval(myNumber.solve().best.toString().replaceAll('×','*')));
+	$('.js-result-box').text(myNumber.solve().best.toString().replaceAll('×','*').replaceAll(' ','') + ' = ' + eval(myNumber.solve().best.toString().replaceAll('×','*'))).addClass('done');
 }).ondblclick = function(e) {
     e.preventDefault();
+	e.stopPropagation();
 }
 
 
