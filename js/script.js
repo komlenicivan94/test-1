@@ -54,6 +54,7 @@ $('.play').click(function() {
 		$(window).scrollTop(0);
 		$('.keyboard-section').removeClass('show');
 		$('.solve, .js-result-box').removeClass('done');
+		$('.solve').text('Rešenje');
 		$(this).text('Igraj').removeClass('restart');
 		$('.submit, .solve').addClass('d-none');
 		$('.bottom-section .row').removeClass('justify-content-between').addClass('justify-content-center');
