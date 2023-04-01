@@ -53,7 +53,7 @@ $('.play').click(function() {
 	if ($(this).hasClass('restart')) {
 		$(window).scrollTop(0);
 		$('.keyboard-section').removeClass('show');
-		$('.solve').removeClass('done');
+		$('.solve, .js-result-box').removeClass('done');
 		$(this).text('Igraj').removeClass('restart');
 		$('.submit, .solve').addClass('d-none');
 		$('.bottom-section .row').removeClass('justify-content-between').addClass('justify-content-center');
