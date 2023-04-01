@@ -3,8 +3,6 @@ Moj Broj
 
 razmak izmedju zutog rezultata i user boxeva
 
-skloni bootstrap
-
 container max width za vece ekrane
 
 box velicina za vece ekrane
@@ -35,13 +33,5 @@ sredi vreme  - progress bar
 sredi logic za vreme
 
 namesti variable za jezik
-
-
-
-
-
-dodaj style sa bootstrap-a za class-e:
-
-container
 
 */
