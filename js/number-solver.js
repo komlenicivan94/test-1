@@ -77,9 +77,8 @@ class MyNumber {
         return littles;
     }
 
-    /** Choose a random integer from 0 to n-1. */
+    /** Choose a random integer from min to max-1. */
     random(min, max) {
-        //return Math.floor(Math.random() * Math.floor(n));
         return Math.floor(Math.random() * (max-min) + min);
     }
 
