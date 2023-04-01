@@ -1,0 +1,58 @@
+Moj Broj
+
+razmak izmedju zutog rezultata i user boxeva
+
+skloni bootstrap
+
+container max width za vece ekrane
+
+box velicina za vece ekrane
+
+pagespeed recommendations
+
+proveri iphone 6 click - probaj .on('click touchstart')
+
+dodaj main element oko svega osim top section i dodaj min-height 100vh - top section
+
+effecti na buttone
+
+nadji font 
+
+loader na resenje
+
+mobilni focus na input scrol to element - mora da se fixira visina za ostatak stranice
+
+nadji slike
+(facial expresion) - mozda
+
+nadji pozadinu - svg ako moze
+
+sredi vreme  - progress bar
+
+sredi logic za vreme
+
+namesti variable za jezik
+
+
+
+
+
+dodaj classe sa bootstrap-a
+
+container
+
+row
+
+justify-content-between
+
+justify-content-center
+
+text-center
+
+mb-4
+
+d-none
+
+d-md-flex
+
+d-md-none

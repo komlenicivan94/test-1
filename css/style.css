@@ -1,26 +1,5 @@
 @charset "utf-8";
-/*General
-
-dodaj classe sa bootstrap-a
-
-container
-
-row
-
-justify-content-between
-
-justify-content-center
-
-text-center
-
-mb-4
-
-d-none
-
-d-md-flex
-
-d-md-none
-*/
+/*General*/
 body {
     color: #fff;
 	background-color: #399ffd;

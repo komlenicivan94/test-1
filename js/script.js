@@ -1,24 +1,3 @@
-/*Moj Broj
-
-effecti na buttone
-
-nadji font 
-
-loader na resenje
-
-mobilni focus na input scrol to element - mora da se fixira visina za ostatak stranice
-
-nadji slike
-(facial expresion) - mozda
-
-nadji pozadinu - svg ako moze
-
-sredi vreme  - progress bar
-
-sredi logic za vreme
-
-namesti variable za jezik
-*/
 var intervalId;
 var myNumber;
 $('.play').click(function() {
