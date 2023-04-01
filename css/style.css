@@ -217,14 +217,19 @@ button.keyboard-btn-half-width {
 }
 
 section.keyboard-section {
-    margin-bottom: 30px;
     height: 0px;
     overflow: hidden;
+    visibility: hidden;
     transition: 0.3s ease height;
 }
 
 section.keyboard-section.show {
-    height: 175px;
+    height: 200px;
+    visibility: visible;
+}
+
+.keyboard-section-inner {
+    padding-bottom: 25px;
 }
 
 /*Mobile*/
