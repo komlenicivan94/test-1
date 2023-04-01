@@ -4,31 +4,19 @@ effecti na buttone
 
 nadji font 
 
-input validation - bolji nacin
-
 loader na resenje
 
-sredi error message
-
-zabrani input i submit pre svih brojeva i onda ga pusti
-
-mobilni focus na input scrol to element
-
-napravi listu komentara pa zovi kad treba
-
-restart alert
+mobilni focus na input scrol to element - mora da se fixira visina za ostatak stranice
 
 nadji slike
-(facial expresion)
+(facial expresion) - mozda
 
-nadji pozadinu
+nadji pozadinu - svg ako moze
 
 sredi vreme  - progress bar
 
 sredi logic za vreme
 */
-
-
 var intervalId;
 var myNumber;
 $('.play').click(function() {
