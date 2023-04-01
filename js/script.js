@@ -126,7 +126,6 @@ $('.submit').click(function() {
 		var usedNumbers = $('.result').val().split(' =')[0].replaceAll('+',' ').replaceAll('-',' ').replaceAll('*',' ').replaceAll('/',' ').replaceAll('(',' ').replaceAll(')',' ').replaceAll('=',' ').split(' ').filter(n => n);
 		var usedTooManyTimes = [];
 		var dontexist = [];
-		var allS = [];
 		for (let i = 0; i < availableNumbers.length; i++) {
 			if (getOccurrence(usedNumbers, availableNumbers[i]) > getOccurrence(availableNumbers, availableNumbers[i])) {
 				usedTooManyTimes.push('<p>U ponuđenim brojevima nema '+getOccurrence(usedNumbers, availableNumbers[i])+' broja ' + availableNumbers[i] + '</p>');
@@ -136,11 +135,9 @@ $('.submit').click(function() {
 			if (getOccurrence(availableNumbers, usedNumbers[i]) === 0) {
 				dontexist.push('<p>Upotrebili ste broj ' + usedNumbers[i] + ' koji ne postoji u ponuđenim brojevima</p>');
 			}
-		}
-	
+		}	
 		var result = eval($('.result').val().split(' =')[0]);
-		var numberFound = '';
-		
+		var numberFound = '';		
 		$('.error-box-message, .user-number').empty();
 		if (dontexist.length > 0 || usedTooManyTimes.length > 0) {
 			$('.message-box').show();
@@ -154,8 +151,7 @@ $('.submit').click(function() {
 		if (result !== undefined) {
 			$('.user-number').text(result.toFixed(2).replace('.00',''));
 			$('.result').val($('.result').val().split(' =')[0]+ ' = ' + result.toFixed(2).replace('.00','') + numberFound);
-		}
-				
+		}				
 	}
 	catch(err) {
 		$('.error-box-message').html('<p>Greska u matematičkom izrazu!</p>');
