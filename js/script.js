@@ -182,15 +182,44 @@ $('.submit').click(function() {
 	}
 })
 
-$('.solve:not(.done)').click(function() {
+/*$('.solve:not(.done)').click(function() {
 	$(this).addClass('done');
 	$('.js-number').text(eval(myNumber.solve().best.toString().replaceAll('×','*')));
 	$('.js-result-box').text(myNumber.solve().best.toString().replaceAll('×','*').replaceAll(' ','') + ' = ' + eval(myNumber.solve().best.toString().replaceAll('×','*'))).addClass('done');
-}).ondblclick = function(e) {
-    e.preventDefault();
-	e.stopPropagation();
+});*/
+/*start*/
+function function1() {
+	$('.solve').addClass('done');
+	$('.js-number').text(eval(myNumber.solve().best.toString().replaceAll('×','*')));
+	$('.js-result-box').text(myNumber.solve().best.toString().replaceAll('×','*').replaceAll(' ','') + ' = ' + eval(myNumber.solve().best.toString().replaceAll('×','*'))).addClass('done');	
+}
+function function2() {
+	$('.solve').addClass('show-all').text('Još Rešenja');
+	console.log('sad')
 }
 
+$('.solve:not(.show-all)').click(function() {
+	$.when(function1()).then(function2());	
+});
+
+function function3() {
+	var allS = [];
+	for (let i = 0; i < myNumber.solve().bestSort.length; i++) {
+		if (myNumber.solve().bestSort[i].toString() !== myNumber.solve().best.toString()) {
+			allS.push('<p>'+myNumber.solve().bestSort[i].toString()+' = '+eval(myNumber.solve().bestSort[i].toString().replaceAll('×','*'))+'</p>');
+		}
+	}
+	$('.pc-results-all-box-message').append(allS);
+}
+function function4() {
+	$('.solve.show-all').removeClass('show-all').text('Thats all');
+	console.log('sad2')
+}
+
+$('.solve.show-all').click(function() {
+	$.when(function3()).then(function4());	
+});
+/*end*/
 
 $('.keyboard-btn:not(.keyboard-clear)').click(function() {
 	$('.result').val($('.result').val().split(' =')[0] + $(this).text());
