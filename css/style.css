@@ -341,6 +341,13 @@ button.keyboard-btn-half-width {
     transform: scale(0.95);
 }
 
+/*Tablet*/
+@media (min-width: 768px) and (max-width: 1199px) {
+    .user-number-box {
+        max-width: 120px;
+    }
+}
+
 /*Mobile*/
 @media (max-width: 767px) {
 .player-image-box {
