@@ -1,5 +1,14 @@
 (function() {
-	function getScript(url,success){
+	function getScript(url,integrity,success){
+
+		var script=document.createElement('script');
+		script.src=url;
+		script.integrity=integrity;
+		script.crossOrigin="anonymous";
+		var head=document.getElementsByTagName('head')[0],
+			done=false;
+		head.appendChild(script);
+
 	  var script=document.createElement('script');
 	  script.src=url;
 	  var head=document.getElementsByTagName('head')[0],
@@ -14,7 +23,7 @@
 	  };
 	  head.appendChild(script);
 	}
-	  getScript('http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js',function(){
+	  getScript('https://code.jquery.com/jquery-3.4.1.slim.min.js','sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n',function(){
 		  // YOUR CODE GOES HERE AND IS EXECUTED AFTER JQUERY LOADS
 
 
