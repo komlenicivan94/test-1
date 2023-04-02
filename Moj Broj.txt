@@ -9,11 +9,7 @@ favicon
 
 proveri iphone 6 click 
 
-dodaj main element oko svega osim top section i dodaj min-height 100vh - top section
-
 nadji font 
-
-mobilni focus na input scrol to element - mora da se fixira visina za ostatak stranice
 
 nadji slike
 (facial expresion) - mozda
