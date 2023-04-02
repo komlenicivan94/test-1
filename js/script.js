@@ -7,12 +7,6 @@
 		script.crossOrigin="anonymous";
 		var head=document.getElementsByTagName('head')[0],
 			done=false;
-		head.appendChild(script);
-
-	  var script=document.createElement('script');
-	  script.src=url;
-	  var head=document.getElementsByTagName('head')[0],
-		  done=false;
 	  script.onload=script.onreadystatechange = function(){
 		if ( !done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete') ) {
 		  done=true;
