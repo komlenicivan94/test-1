@@ -1,6 +1,6 @@
 var intervalId;
 var myNumber;
-$('.play').click(function() {
+$('.play').on('click touchstart', function() {
 	var mainNumber = $('.main-number-box .number-box:not(.done)');
 	var singleNumbers = $('.single-numbers-box .number-box:not(.done)');
 	var middleNumber = $('.middle-number-box .number-box:not(.done)');
