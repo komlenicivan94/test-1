@@ -1,6 +1,8 @@
 /*
 Moj Broj 
 
+restart pop up
+
 container max width za vece ekrane
 
 box velicina za vece ekrane

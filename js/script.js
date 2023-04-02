@@ -1,3 +1,23 @@
+(function() {
+	function getScript(url,success){
+	  var script=document.createElement('script');
+	  script.src=url;
+	  var head=document.getElementsByTagName('head')[0],
+		  done=false;
+	  script.onload=script.onreadystatechange = function(){
+		if ( !done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete') ) {
+		  done=true;
+		  success();
+		  script.onload = script.onreadystatechange = null;
+		  head.removeChild(script);
+		}
+	  };
+	  head.appendChild(script);
+	}
+	  getScript('https://code.jquery.com/jquery-3.4.1.slim.min.js',function(){
+		  // YOUR CODE GOES HERE AND IS EXECUTED AFTER JQUERY LOADS
+
+
 var intervalId;
 var myNumber;
 $('.play').click(function() {
@@ -171,3 +191,10 @@ $('.keyboard-btn, .button').on("touchstart mousedown", function() {
 $('.keyboard-btn, .button').on("touchend mouseup", function() {
 	$(this).removeClass('active');
 });
+
+
+
+
+
+});
+})();
