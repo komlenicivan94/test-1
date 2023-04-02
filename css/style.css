@@ -348,10 +348,6 @@ button.keyboard-btn-half-width {
     transform: scale(0.95);
 }
 
-.btn-section-inner {
-    /*padding-top: 16px;*/
-}
-
 /*Tablet*/
 @media (min-width: 768px) and (max-width: 1199px) {
     .user-number-box {
@@ -404,7 +400,6 @@ section.numbers-section .row:last-child {
 }
 
 section.results-section {
-    padding-top: 12px;
     padding-bottom: 15px;
 }
 
