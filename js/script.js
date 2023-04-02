@@ -59,9 +59,9 @@ $('.play').click(function() {
 		}	
 		var numbersSection = $('section.numbers-section').outerHeight(true);
 		var resultsSection = $('section.results-section').outerHeight(true);
-		var bottomSection = $('section.bottom-section').outerHeight(true);
-		var keyboardSection = $(window).height() - numbersSection - resultsSection - bottomSection*3;
-		console.log('screen: ' + $(window).height());
+		var bottomSection = $('section.bottom-section').eq(0).outerHeight(true);
+		var keyboardSection = $(window).height() - numbersSection - resultsSection - bottomSection*2;
+		console.log('screen1: ' + $(window).height());
 		console.log('numbersSection: ' + numbersSection);
 		console.log('resultsSection: ' + resultsSection);
 		console.log('bottomSection: ' + bottomSection);
