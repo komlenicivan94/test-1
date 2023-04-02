@@ -7,7 +7,7 @@ $('.play').click(function() {
 	var bigNumber = $('.big-number-box .number-box:not(.done)');
 	if ($(this).hasClass('restart')) {
 		$(window).scrollTop(0);
-		//$('.keyboard-section').removeClass('show');
+		$('.keyboard-section').removeClass('show');
 		$('main').height('auto');
 		$('section.keyboard-section').height('0px').removeClass('show');
 		$('.solve, .js-result-box, .js-number').removeClass('done');
@@ -61,7 +61,7 @@ $('.play').click(function() {
 		var numbersSection = $('section.numbers-section').outerHeight(true);
 		var resultsSection = $('section.results-section').outerHeight(true);
 		var bottomSection = 62;
-		var keyboardSection = $(window).innerHeight() - numbersSection - resultsSection;
+		var keyboardSection = $(window).innerHeight() - numbersSection - resultsSection - bottomSection;
 		console.log('screen0: ' + $(window).innerHeight());
 		console.log('numbersSection: ' + numbersSection);
 		console.log('resultsSection: ' + resultsSection);
@@ -84,7 +84,7 @@ $(window).resize(function() {
 		var numbersSection = $('section.numbers-section').outerHeight(true);
 		var resultsSection = $('section.results-section').outerHeight(true);
 		var bottomSection = 62;
-		var keyboardSection = $(window).innerHeight() - numbersSection - resultsSection;
+		var keyboardSection = $(window).innerHeight() - numbersSection - resultsSection - bottomSection;
 		console.log('screen5: ' + $(window).innerHeight());
 		console.log('numbersSection: ' + numbersSection);
 		console.log('resultsSection: ' + resultsSection);
