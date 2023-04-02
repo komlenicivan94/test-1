@@ -282,9 +282,37 @@ button.solve.done {
 
 
 /*Keyboard*/
+section.keyboard-section {
+    height: 0px;
+    overflow: hidden;
+    visibility: hidden;
+    transition: 0.3s ease height;
+}
+
+section.keyboard-section.show {
+    height: 200px;
+    visibility: visible;
+}
+
+.keyboard-section-inner {
+    border: 2px solid #fff;
+    border-radius: 7px;
+    box-shadow: 0 0 0 2px #0b1168;
+    padding: 2px;
+    margin: 2px auto 16px;
+}
+
+.keyboard-flex-box {
+    display: flex;
+    column-gap: 2px;
+    row-gap: 2px;
+    flex-wrap: wrap; 
+}
+
 button.keyboard-btn {
     font-size: 25px;
     width: calc(25% - 2px);
+    flex-grow: 1;
     border-radius: 5px;
     background: #0b1168;
     color: #fff;
@@ -304,29 +332,6 @@ button.keyboard-btn {
 
 button.keyboard-btn-half-width {
     width: calc(12.5% - 2px);
-}
-
-.keyboard-flex-box {
-    display: flex;
-    column-gap: 2px;
-    row-gap: 2px;
-    flex-wrap: wrap; 
-}
-
-section.keyboard-section {
-    height: 0px;
-    overflow: hidden;
-    visibility: hidden;
-    transition: 0.3s ease height;
-}
-
-section.keyboard-section.show {
-    height: 200px;
-    visibility: visible;
-}
-
-.keyboard-section-inner {
-    padding-bottom: 25px;
 }
 
 /*Mobile*/
