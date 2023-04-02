@@ -9,7 +9,6 @@ $('.play').click(function() {
 		$(window).scrollTop(0);
 		$('.keyboard-section').removeClass('show');
 		$('main').height('auto');
-		$('section.keyboard-section').height('0px').removeClass('show');
 		$('.solve, .js-result-box, .js-number').removeClass('done');
 		$(this).text('Igraj').removeClass('restart');
 		$('.submit, .solve').addClass('d-none');
