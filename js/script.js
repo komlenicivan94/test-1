@@ -60,8 +60,7 @@ $('.play').click(function() {
 		var numbersSection = $('section.numbers-section').outerHeight(true);
 		var resultsSection = $('section.results-section').outerHeight(true);
 		var bottomSection = $('section.bottom-section').outerHeight(true);
-		var bottomSectionM = $('section.bottom-section.d-md-none').outerHeight(true);
-		var keyboardSection = $(window).height() - numbersSection - resultsSection - bottomSection - bottomSectionM;
+		var keyboardSection = $(window).height() - numbersSection - resultsSection - bottomSection;
 		$('section.keyboard-section').height(keyboardSection).addClass('show');
 		//$('.keyboard-section').addClass('show');
 		$('.submit, .solve').removeClass('d-none');
