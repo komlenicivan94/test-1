@@ -361,6 +361,13 @@ button.keyboard-btn-half-width {
     line-height: 35px;
 }
 
+.main-number-box .number-box {
+    width: 45px;
+    height: 45px;
+    line-height: 40px;
+    font-size: 35px;
+}
+
 .number-flex-box {
     column-gap: 7px;
 }
