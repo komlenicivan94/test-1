@@ -1,8 +1,6 @@
 /*
 Moj Broj 
 
-razmak izmedju zutog rezultata i user boxeva
-
 container max width za vece ekrane
 
 box velicina za vece ekrane
@@ -13,11 +11,7 @@ proveri iphone 6 click
 
 dodaj main element oko svega osim top section i dodaj min-height 100vh - top section
 
-effecti na buttone
-
 nadji font 
-
-loader na resenje
 
 mobilni focus na input scrol to element - mora da se fixira visina za ostatak stranice
 
