@@ -61,6 +61,11 @@ $('.play').click(function() {
 		var resultsSection = $('section.results-section').outerHeight(true);
 		var bottomSection = $('section.bottom-section').outerHeight(true);
 		var keyboardSection = $(window).height() - numbersSection - resultsSection - bottomSection*3;
+		console.log('screen: ' + $(window).height());
+		console.log('numbersSection: ' + numbersSection);
+		console.log('resultsSection: ' + resultsSection);
+		console.log('bottomSection: ' + bottomSection);
+		console.log('keyboardSection: ' + keyboardSection);
 		$('section.keyboard-section').height(keyboardSection).addClass('show');
 		//$('.keyboard-section').addClass('show');
 		$('.submit, .solve').removeClass('d-none');
