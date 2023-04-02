@@ -61,12 +61,16 @@ $('.play').click(function() {
 		var resultsSection = $('section.results-section').outerHeight(true);
 		var bottomSection = 62;
 		var keyboardSection = $(window).innerHeight() - numbersSection - resultsSection - bottomSection*2;
-		console.log('screen2: ' + $(window).innerHeight());
+		console.log('screen0: ' + $(window).innerHeight());
 		console.log('numbersSection: ' + numbersSection);
 		console.log('resultsSection: ' + resultsSection);
 		console.log('bottomSection: ' + bottomSection);
 		console.log('keyboardSection: ' + keyboardSection);
-		$('section.keyboard-section').height(keyboardSection).addClass('show');
+		if (keyboardSection > 200) {
+			$('section.keyboard-section').height(keyboardSection).addClass('show');
+		} else {
+			$('section.keyboard-section').height(200).addClass('show');
+		}
 		//$('.keyboard-section').addClass('show');
 		$('.submit, .solve').removeClass('d-none');
 		$('.bottom-section .row').addClass('justify-content-between').removeClass('justify-content-center');
@@ -80,12 +84,16 @@ $(window).resize(function() {
 		var resultsSection = $('section.results-section').outerHeight(true);
 		var bottomSection = 62;
 		var keyboardSection = $(window).innerHeight() - numbersSection - resultsSection - bottomSection*2;
-		console.log('screen4: ' + $(window).innerHeight());
+		console.log('screen5: ' + $(window).innerHeight());
 		console.log('numbersSection: ' + numbersSection);
 		console.log('resultsSection: ' + resultsSection);
 		console.log('bottomSection: ' + bottomSection);
 		console.log('keyboardSection: ' + keyboardSection);
-		$('section.keyboard-section').height(keyboardSection);
+		if (keyboardSection > 200) {
+			$('section.keyboard-section').height(keyboardSection);
+		} else {
+			$('section.keyboard-section').height(200);
+		}
 	}
   });
 
