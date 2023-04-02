@@ -350,6 +350,10 @@ button.keyboard-btn-half-width {
 
 /*Mobile*/
 @media (max-width: 767px) {
+section.top-section {
+    margin-bottom: 20px;
+}
+
 .player-image-box {
 	padding-bottom: 40%;
 }
