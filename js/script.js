@@ -61,7 +61,7 @@ $('.play').click(function() {
 		var resultsSection = $('section.results-section').outerHeight(true);
 		var bottomSection = 62;
 		var keyboardSection = $(window).height() - numbersSection - resultsSection - bottomSection*2;
-		console.log('screen1: ' + $(window).height());
+		console.log('screen2: ' + $(window).height());
 		console.log('numbersSection: ' + numbersSection);
 		console.log('resultsSection: ' + resultsSection);
 		console.log('bottomSection: ' + bottomSection);
