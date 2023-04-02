@@ -143,3 +143,11 @@ $('.keyboard-clear').click(function() {
 	$('.error-box-message, .user-number').empty();
 	$('.user-number').removeClass('correct false');
 });
+
+$('.keyboard-btn').on("touchstart", function() {
+	$(this).addClass('active');
+});
+
+$('.keyboard-btn').on("touchend", function() {
+	$(this).removeClass('active');
+});

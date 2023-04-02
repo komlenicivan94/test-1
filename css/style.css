@@ -329,10 +329,15 @@ button.keyboard-btn {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    transition: all .1s ease-in-out;
 }
 
 button.keyboard-btn-half-width {
     width: calc(12.5% - 2px);
+}
+
+button.keyboard-btn.active {
+    transform: scale(0.95);
 }
 
 /*Mobile*/
