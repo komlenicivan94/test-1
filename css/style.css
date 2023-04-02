@@ -298,13 +298,16 @@ section.keyboard-section.show {
     visibility: visible;
 }
 
+section.keyboard-section .container {
+    padding-top: 2px;
+}
+
 .keyboard-section-inner {
     background: #fff;
     border: 2px solid #fff;
     border-radius: 7px;
     box-shadow: 0 0 0 2px #0b1168;
     padding: 2px;
-    margin: 2px auto 16px;
 }
 
 .keyboard-flex-box {
