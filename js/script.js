@@ -60,8 +60,8 @@ $('.play').click(function() {
 		var numbersSection = $('section.numbers-section').outerHeight(true);
 		var resultsSection = $('section.results-section').outerHeight(true);
 		var bottomSection = 62;
-		var keyboardSection = $(window).height() - numbersSection - resultsSection - bottomSection*2;
-		console.log('screen2: ' + $(window).height());
+		var keyboardSection = $(window).innerHeight() - numbersSection - resultsSection - bottomSection*2;
+		console.log('screen2: ' + $(window).innerHeight());
 		console.log('numbersSection: ' + numbersSection);
 		console.log('resultsSection: ' + resultsSection);
 		console.log('bottomSection: ' + bottomSection);
@@ -79,8 +79,8 @@ $(window).resize(function() {
 		var numbersSection = $('section.numbers-section').outerHeight(true);
 		var resultsSection = $('section.results-section').outerHeight(true);
 		var bottomSection = 62;
-		var keyboardSection = $(window).height() - numbersSection - resultsSection - bottomSection*2;
-		console.log('screen3: ' + $(window).height());
+		var keyboardSection = $(window).innerHeight() - numbersSection - resultsSection - bottomSection*2;
+		console.log('screen4: ' + $(window).innerHeight());
 		console.log('numbersSection: ' + numbersSection);
 		console.log('resultsSection: ' + resultsSection);
 		console.log('bottomSection: ' + bottomSection);
