@@ -8,6 +8,7 @@ $('.play').click(function() {
 	if ($(this).hasClass('restart')) {
 		$(window).scrollTop(0);
 		//$('.keyboard-section').removeClass('show');
+		$('main').height('auto');
 		$('section.keyboard-section').height('0px').removeClass('show');
 		$('.solve, .js-result-box, .js-number').removeClass('done');
 		$(this).text('Igraj').removeClass('restart');
@@ -67,11 +68,11 @@ $('.play').click(function() {
 		console.log('bottomSection: ' + bottomSection);
 		console.log('keyboardSection: ' + keyboardSection);
 		if (keyboardSection > 262) {
-			$('section.keyboard-section').height(keyboardSection).addClass('show');
+			$('main').height(keyboardSection).addClass('done');
 		} else {
-			$('section.keyboard-section').height(262).addClass('show');
+			$('main').height(262).addClass('done');
 		}
-		//$('.keyboard-section').addClass('show');
+		$('.keyboard-section').addClass('show');
 		$('.submit, .solve').removeClass('d-none');
 		$('.bottom-section .row, .btn-section-inner .row').addClass('justify-content-between').removeClass('justify-content-center');
 	} 
@@ -90,9 +91,9 @@ $(window).resize(function() {
 		console.log('bottomSection: ' + bottomSection);
 		console.log('keyboardSection: ' + keyboardSection);
 		if (keyboardSection > 262) {
-			$('section.keyboard-section').height(keyboardSection);
+			$('main').height(keyboardSection);
 		} else {
-			$('section.keyboard-section').height(262);
+			$('main').height(262);
 		}
 	}
   });

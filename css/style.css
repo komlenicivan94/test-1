@@ -294,12 +294,13 @@ section.keyboard-section {
 }
 
 section.keyboard-section.show {
-    /*height: 200px;*/
+    height: 200px;
     visibility: visible;
 }
 
 section.keyboard-section .container {
     padding-top: 2px;
+    padding-bottom: 2px;
 }
 
 .keyboard-section-inner {
