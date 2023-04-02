@@ -3,7 +3,7 @@
 body {
     color: #fff;
 	background-color: #399ffd;
-    background-image: url(../img/background.webp);
+    /*background-image: url(../img/background.webp);*/
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 100vh;
