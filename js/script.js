@@ -73,6 +73,22 @@ $('.play').click(function() {
 	} 
 });
 
+$(window).resize(function() {
+	//resize just happened, pixels changed
+	if ($('section.keyboard-section').hasClass('show')) {
+		var numbersSection = $('section.numbers-section').outerHeight(true);
+		var resultsSection = $('section.results-section').outerHeight(true);
+		var bottomSection = 62;
+		var keyboardSection = $(window).height() - numbersSection - resultsSection - bottomSection*2;
+		console.log('screen3: ' + $(window).height());
+		console.log('numbersSection: ' + numbersSection);
+		console.log('resultsSection: ' + resultsSection);
+		console.log('bottomSection: ' + bottomSection);
+		console.log('keyboardSection: ' + keyboardSection);
+		$('section.keyboard-section').height(keyboardSection);
+	}
+  });
+
 function getOccurrence(array, value) {
 	return array.filter((v) => (v === value)).length;
 }
