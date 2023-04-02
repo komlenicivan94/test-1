@@ -399,7 +399,7 @@ section.numbers-section .row {
     text-align: center;
     font-size: 26px;
     line-height: 30px;
-    min-height: 36px;
+    min-height: 30px;
 }
 
 input.result { 
