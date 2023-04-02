@@ -14,7 +14,7 @@
 	  };
 	  head.appendChild(script);
 	}
-	  getScript('https://code.jquery.com/jquery-3.4.1.slim.min.js',function(){
+	  getScript('http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js',function(){
 		  // YOUR CODE GOES HERE AND IS EXECUTED AFTER JQUERY LOADS
 
 
