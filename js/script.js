@@ -144,10 +144,10 @@ $('.keyboard-clear').click(function() {
 	$('.user-number').removeClass('correct false');
 });
 
-$('.keyboard-btn, .button').on("touchstart", function() {
+$('.keyboard-btn, .button').on("touchstart, mousedown", function() {
 	$(this).addClass('active');
 });
 
-$('.keyboard-btn, .button').on("touchend", function() {
+$('.keyboard-btn, .button').on("touchend, mouseup", function() {
 	$(this).removeClass('active');
 });
