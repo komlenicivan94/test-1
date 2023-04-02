@@ -417,6 +417,7 @@ section.results-section {
     height: 40px;
     min-width: 80px;
     line-height: 35px;
+    padding-bottom: 0;
 }
 
 .js-result-box {
