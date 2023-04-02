@@ -274,6 +274,7 @@ input.result.done {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    transition: all .1s ease-in-out;
 }
 
 button.solve.done {
@@ -336,7 +337,7 @@ button.keyboard-btn-half-width {
     width: calc(12.5% - 2px);
 }
 
-button.keyboard-btn.active {
+.active {
     transform: scale(0.95);
 }
 
