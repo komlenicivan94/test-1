@@ -383,6 +383,10 @@ section.numbers-section .row {
     padding: 0;
 }
 
+section.numbers-section .row:last-child {
+    margin: 0 !important;
+}
+
 .middle-number-box .number-box {
     width: 60px;
 }
@@ -391,8 +395,13 @@ section.numbers-section .row {
     width: 80px;
 }
 
+section.results-section {
+    padding-top: 12px;
+    padding-bottom: 15px;
+}
+
 .results-section-inner {
-    margin: 12px 0 15px;
+    margin: 0;
 	padding: 5px 10px 10px;
 }
 	
