@@ -57,38 +57,23 @@ $('.play').click(function() {
 		if (!window.matchMedia("(pointer: coarse)").matches) {
 			$('.result').focus().removeClass('done');
 		}	
-		var numbersSection = $('section.numbers-section').outerHeight(true);
-		var resultsSection = $('section.results-section').outerHeight(true);
-		var bottomSection = 62;
-		var keyboardSection = $(window).innerHeight() - numbersSection - resultsSection - bottomSection;
-		console.log('screen0: ' + $(window).innerHeight());
-		console.log('numbersSection: ' + numbersSection);
-		console.log('resultsSection: ' + resultsSection);
-		console.log('bottomSection: ' + bottomSection);
-		console.log('keyboardSection: ' + keyboardSection);
-		if (keyboardSection > 262) {
-			$('main').height(keyboardSection).addClass('done');
-		} else {
-			$('main').height(262).addClass('done');
+		if (window.matchMedia("(max-width: 767px)").matches) {
+			var keyboardSection = $(window).innerHeight() - $('section.numbers-section').outerHeight(true) - $('section.results-section').outerHeight(true) - 62;
+			if (keyboardSection > 262) {
+				$('main').height(keyboardSection).addClass('done');
+			} else {
+				$('main').height(262).addClass('done');
+			}
+			$('.keyboard-section').addClass('show');
 		}
-		$('.keyboard-section').addClass('show');
 		$('.submit, .solve').removeClass('d-none');
 		$('.bottom-section .row, .btn-section-inner .row').addClass('justify-content-between').removeClass('justify-content-center');
 	} 
 });
 
 $(window).resize(function() {
-	//resize just happened, pixels changed
 	if ($('section.keyboard-section').hasClass('show')) {
-		var numbersSection = $('section.numbers-section').outerHeight(true);
-		var resultsSection = $('section.results-section').outerHeight(true);
-		var bottomSection = 62;
-		var keyboardSection = $(window).innerHeight() - numbersSection - resultsSection - bottomSection;
-		console.log('screen5: ' + $(window).innerHeight());
-		console.log('numbersSection: ' + numbersSection);
-		console.log('resultsSection: ' + resultsSection);
-		console.log('bottomSection: ' + bottomSection);
-		console.log('keyboardSection: ' + keyboardSection);
+		var keyboardSection = $(window).innerHeight() - $('section.numbers-section').outerHeight(true) - $('section.results-section').outerHeight(true) - 62;
 		if (keyboardSection > 262) {
 			$('main').height(keyboardSection);
 		} else {
