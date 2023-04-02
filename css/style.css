@@ -257,8 +257,8 @@ input.result.done {
 
 .button {
     background: #0b1168;
-    border: 4px solid #fff;
-    border-radius: 8px;
+    border: 2px solid #fff;
+    border-radius: 4px;
     box-shadow: 0 0 0 2px #0b1168;
     color: #fff;
     width: 150px;
@@ -426,6 +426,11 @@ input.result {
 
 section.bottom-section:not(.d-md-none) .bottom-section-inner .row {
     justify-content: center !important;
+}
+
+.button {
+    border: 4px solid #fff;
+    border-radius: 8px;
 }
 
 button.keyboard-btn {
