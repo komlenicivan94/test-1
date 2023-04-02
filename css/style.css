@@ -228,16 +228,16 @@ input.result.done {
 
 .user-number.correct {
     border-color: green;
-    box-shadow: 0 0 0 1px green;
+    box-shadow: 0 0 0 2px green;
 }
 
 .user-number.false {
     border-color: red;
-    box-shadow: 0 0 0 1px red;
+    box-shadow: 0 0 0 2px red;
 }
 
 .js-number.done {
-    border-width: 3px;
+    box-shadow: 0 0 0 2px #fff;
 }
 	
 .js-result-box {
