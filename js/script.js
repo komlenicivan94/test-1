@@ -12,7 +12,7 @@ $('.play').click(function() {
 		$('.solve, .js-result-box, .js-number').removeClass('done');
 		$(this).text('Igraj').removeClass('restart');
 		$('.submit, .solve').addClass('d-none');
-		$('.bottom-section .row').removeClass('justify-content-between').addClass('justify-content-center');
+		$('.bottom-section .row, .btn-section-inner .row').removeClass('justify-content-between').addClass('justify-content-center');
 		$('.number-box').text('').removeClass('done');
 		$('.result').val('').addClass('done');
 		$('.user-number').removeClass('correct false');
@@ -60,20 +60,20 @@ $('.play').click(function() {
 		var numbersSection = $('section.numbers-section').outerHeight(true);
 		var resultsSection = $('section.results-section').outerHeight(true);
 		var bottomSection = 62;
-		var keyboardSection = $(window).innerHeight() - numbersSection - resultsSection - bottomSection*2;
+		var keyboardSection = $(window).innerHeight() - numbersSection - resultsSection;
 		console.log('screen0: ' + $(window).innerHeight());
 		console.log('numbersSection: ' + numbersSection);
 		console.log('resultsSection: ' + resultsSection);
 		console.log('bottomSection: ' + bottomSection);
 		console.log('keyboardSection: ' + keyboardSection);
-		if (keyboardSection > 200) {
+		if (keyboardSection > 262) {
 			$('section.keyboard-section').height(keyboardSection).addClass('show');
 		} else {
-			$('section.keyboard-section').height(200).addClass('show');
+			$('section.keyboard-section').height(262).addClass('show');
 		}
 		//$('.keyboard-section').addClass('show');
 		$('.submit, .solve').removeClass('d-none');
-		$('.bottom-section .row').addClass('justify-content-between').removeClass('justify-content-center');
+		$('.bottom-section .row, .btn-section-inner .row').addClass('justify-content-between').removeClass('justify-content-center');
 	} 
 });
 
@@ -83,16 +83,16 @@ $(window).resize(function() {
 		var numbersSection = $('section.numbers-section').outerHeight(true);
 		var resultsSection = $('section.results-section').outerHeight(true);
 		var bottomSection = 62;
-		var keyboardSection = $(window).innerHeight() - numbersSection - resultsSection - bottomSection*2;
+		var keyboardSection = $(window).innerHeight() - numbersSection - resultsSection;
 		console.log('screen5: ' + $(window).innerHeight());
 		console.log('numbersSection: ' + numbersSection);
 		console.log('resultsSection: ' + resultsSection);
 		console.log('bottomSection: ' + bottomSection);
 		console.log('keyboardSection: ' + keyboardSection);
-		if (keyboardSection > 200) {
+		if (keyboardSection > 262) {
 			$('section.keyboard-section').height(keyboardSection);
 		} else {
-			$('section.keyboard-section').height(200);
+			$('section.keyboard-section').height(262);
 		}
 	}
   });
