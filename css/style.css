@@ -294,7 +294,7 @@ section.keyboard-section {
 }
 
 section.keyboard-section.show {
-    height: 200px;
+    /*height: 200px;*/
     visibility: visible;
 }
 

@@ -7,7 +7,8 @@ $('.play').click(function() {
 	var bigNumber = $('.big-number-box .number-box:not(.done)');
 	if ($(this).hasClass('restart')) {
 		$(window).scrollTop(0);
-		$('.keyboard-section').removeClass('show');
+		//$('.keyboard-section').removeClass('show');
+		$('section.keyboard-section').height('0px').removeClass('show');
 		$('.solve, .js-result-box, .js-number').removeClass('done');
 		$(this).text('Igraj').removeClass('restart');
 		$('.submit, .solve').addClass('d-none');
@@ -56,7 +57,13 @@ $('.play').click(function() {
 		if (!window.matchMedia("(pointer: coarse)").matches) {
 			$('.result').focus().removeClass('done');
 		}	
-		$('.keyboard-section').addClass('show');
+		var numbersSection = $('section.numbers-section').outerHeight(true);
+		var resultsSection = $('section.results-section').outerHeight(true);
+		var bottomSection = $('section.bottom-section').outerHeight(true);
+		var bottomSectionM = $('section.bottom-section.d-md-none').outerHeight(true);
+		var keyboardSection = $(window).height() - numbersSection - resultsSection - bottomSection - bottomSectionM;
+		$('section.keyboard-section').height(keyboardSection).addClass('show');
+		//$('.keyboard-section').addClass('show');
 		$('.submit, .solve').removeClass('d-none');
 		$('.bottom-section .row').addClass('justify-content-between').removeClass('justify-content-center');
 	} 
