@@ -168,18 +168,12 @@
 		});
 
 		$('.keyboard-btn:not(.keyboard-clear)').click(function() {
-			$(this).addClass('active').one('animationend', function() {
-				$(this).removeClass('active');
-			});
 			$('.result').val($('.result').val().split(' =')[0] + $(this).text());
 			$('.error-box-message, .user-number').empty();
 			$('.user-number').removeClass('correct false');
 		});
 
 		$('.keyboard-clear').click(function() {
-			$(this).addClass('active').one('animationend', function() {
-				$(this).removeClass('active');
-			});
 			if ($('.result').val().indexOf('=') > -1) {
 				$('.result').val($('.result').val().split(' =')[0]);
 			} else {
@@ -187,6 +181,12 @@
 			}
 			$('.error-box-message, .user-number').empty();
 			$('.user-number').removeClass('correct false');
+		});
+
+		$('.button, .keyboard-btn').click(function() {
+			$(this).addClass('active').one('animationend', function() {
+				$(this).removeClass('active');
+			});
 		});
 	});
 })();
