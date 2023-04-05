@@ -1,6 +1,8 @@
 /*
 Moj Broj 
 
+sredi issues sa screenshotova
+
 restart pop up
 
 container max width za vece ekrane
