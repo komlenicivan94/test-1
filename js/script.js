@@ -120,7 +120,7 @@
 			}
 		});
 
-		$('.submit').on("touchstart click", function() {	
+		$('.submit').click(function() {	
 			try {
 				var targetResult = Number($('.main-number-box .number-box').text());
 				var availableNumbers = [];
@@ -183,17 +183,11 @@
 			$('.user-number').removeClass('correct false');
 		});
 
-		/*$('.keyboard-btn, .button').on("touchstart mousedown", function() {
+		$('.keyboard-btn, .button').on("touchstart mousedown", function() {
 			$(this).addClass('active');
 		});
 
 		$('.keyboard-btn, .button').on("touchend mouseup", function() {
-			$(this).removeClass('active');
-		});*/
-		$('.keyboard-btn, .button').bind('touchstart mouseenter', function() {
-			$(this).addClass('active');
-		});
-		$('.keyboard-btn, .button').bind('mouseleave touchmove click', function() {
 			$(this).removeClass('active');
 		});
 	});
