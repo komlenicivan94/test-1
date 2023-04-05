@@ -167,10 +167,11 @@
 			$('.js-result-box').text(myNumber.solve().best.toString().replaceAll('×','*').replaceAll(' ','') + ' = ' + eval(myNumber.solve().best.toString().replaceAll('×','*'))).addClass('done');
 		});
 
-		$('.keyboard-btn:not(.keyboard-clear)').click(function() {
+		$('.keyboard-btn:not(.keyboard-clear)').on("touchstart mousedown", function() {
 			$('.result').val($('.result').val().split(' =')[0] + $(this).text());
 			$('.error-box-message, .user-number').empty();
 			$('.user-number').removeClass('correct false');
+			$(this).addClass('active');
 		});
 
 		$('.keyboard-clear').click(function() {
@@ -183,9 +184,9 @@
 			$('.user-number').removeClass('correct false');
 		});
 
-		$('.keyboard-btn, .button').on("touchstart mousedown", function() {
+		/*$('.keyboard-btn, .button').on("touchstart mousedown", function() {
 			$(this).addClass('active');
-		});
+		});*/
 
 		$('.keyboard-btn, .button').on("touchmove", function() {
 			$(this).touchend();
