@@ -183,16 +183,8 @@
 			$('.error-box-message, .user-number').empty();
 			$('.user-number').removeClass('correct false');
 		});
-
-		/*$('.keyboard-btn, .button').on("touchstart mousedown", function() {
-			$(this).addClass('active');
-		});*/
-
-		$('.keyboard-btn, .button').on("touchmove", function() {
-			$(this).touchend();
-		});
 		
-		$('.keyboard-btn, .button').on("touchend mouseup", function() {
+		$('.keyboard-btn, .button').on("touchend mouseup touchmove", function() {
 			$(this).removeClass('active');
 		});
 	});
