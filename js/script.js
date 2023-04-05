@@ -187,6 +187,10 @@
 			$(this).addClass('active');
 		});
 
+		$('.keyboard-btn, .button').on("touchmove", function() {
+			$(this).touchend();
+		});
+		
 		$('.keyboard-btn, .button').on("touchend mouseup", function() {
 			$(this).removeClass('active');
 		});
