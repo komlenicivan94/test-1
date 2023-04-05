@@ -176,6 +176,7 @@
 		});
 
 		$('.keyboard-clear').click(function() {
+			$(this).css('animation','click 0.2s linear');
 			if ($('.result').val().indexOf('=') > -1) {
 				$('.result').val($('.result').val().split(' =')[0]);
 			} else {
@@ -184,9 +185,5 @@
 			$('.error-box-message, .user-number').empty();
 			$('.user-number').removeClass('correct false');
 		});
-		
-		/*$('.keyboard-btn, .button').on("touchend mouseup touchmove", function() {
-			$(this).removeClass('active');
-		});*/
 	});
 })();
