@@ -168,11 +168,9 @@
 		});
 
 		$('.keyboard-btn:not(.keyboard-clear)').click(function() {
-			$(this).addClass('active');
 			$('.result').val($('.result').val().split(' =')[0] + $(this).text());
 			$('.error-box-message, .user-number').empty();
 			$('.user-number').removeClass('correct false');
-			$(this).removeClass('active');
 		});
 
 		$('.keyboard-clear').click(function() {
