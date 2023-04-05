@@ -120,7 +120,7 @@
 			}
 		});
 
-		$('.submit').click(function() {	
+		$('.submit').on("touchstart click", function() {	
 			try {
 				var targetResult = Number($('.main-number-box .number-box').text());
 				var availableNumbers = [];
