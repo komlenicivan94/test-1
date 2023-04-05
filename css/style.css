@@ -1,6 +1,11 @@
 @charset "utf-8";
 /*General*/
+html {
+    overflow-x: hidden;
+}
+
 body {
+    overflow-x: hidden;
     color: #fff;
 	background-color: #399ffd;
     /*background-image: url(../img/background.webp);*/
@@ -208,6 +213,10 @@ input.result.done {
 
 .message-box {
     text-align: center;
+}
+
+.error-box-message p {
+    word-break: break-word;
 }
 
 .user-number-box {
