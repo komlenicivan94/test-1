@@ -168,13 +168,14 @@
 		});
 
 		$('.keyboard-btn:not(.keyboard-clear)').click(function() {
+			$(this).css('animation','click 0.08s linear');
 			$('.result').val($('.result').val().split(' =')[0] + $(this).text());
 			$('.error-box-message, .user-number').empty();
 			$('.user-number').removeClass('correct false');
 		});
 
 		$('.keyboard-clear').click(function() {
-			$(this).css('animation','click 0.2s linear');
+			$(this).css('animation','click 0.08s linear');
 			if ($('.result').val().indexOf('=') > -1) {
 				$('.result').val($('.result').val().split(' =')[0]);
 			} else {
