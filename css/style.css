@@ -345,7 +345,8 @@ button.keyboard-btn-half-width {
 }
 
 .active {
-    transform: scale(0.95);
+    /*transform: scale(0.95);*/
+    animation: 0.08s linear 0s 1 normal none running click;
 }
 
 /*Tablet*/
