@@ -345,7 +345,6 @@ button.keyboard-btn-half-width {
 }
 
 .active {
-    /*transform: scale(0.95);*/
     animation: 0.08s linear 0s 1 normal none running click;
 }
 
@@ -426,13 +425,13 @@ section.results-section {
     order: -1;
     width: 100%;
     text-align: center;
-    font-size: 26px;
+    font-size: 25px;
     line-height: 30px;
     min-height: 32px;
 }
 
 input.result { 
-    font-size: 27px;
+    font-size: 26px;
     line-height: 35px;
     pointer-events: none;
     -webkit-user-select: none;
