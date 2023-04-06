@@ -1,3 +1,4 @@
+var myNumber;
 (function() {
 	function getScript(url,integrity,success){
 		var script = document.createElement('script');
@@ -18,7 +19,7 @@
 	}
 	getScript('https://code.jquery.com/jquery-3.4.1.slim.min.js','sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n',function(){
 		var intervalId;
-		var myNumber;
+		
 		$('.play').click(function() {
 			var mainNumber = $('.main-number-box .number-box:not(.done)');
 			var singleNumbers = $('.single-numbers-box .number-box:not(.done)');
@@ -42,6 +43,9 @@
 				intervalId = window.setInterval(function(){
 					mainNumber.eq(0).text(Math.floor(Math.random() * (9 - 0 + 1) + 0));
 				}, 100);
+				async function myFunction() {
+					return jsNumber = myNumber.solve().best.toString().replaceAll('×','*').replaceAll(' ','');
+				}
 			} else if (mainNumber.length > 0) {
 				clearInterval(intervalId);
 				let numCheck = (myNumber.target.toString().split('').reverse()[mainNumber.length-1] === undefined) ? '0' : myNumber.target.toString().split('').reverse()[mainNumber.length-1];
@@ -86,7 +90,6 @@
 				}
 				$('.submit, .solve').removeClass('d-none');
 				$('.bottom-section .row, .btn-section-inner .row').addClass('justify-content-between').removeClass('justify-content-center');
-				jsNumber = myNumber.solve().best.toString().replaceAll('×','*').replaceAll(' ','');
 			} 
 		});
 
@@ -163,8 +166,10 @@
 
 		$('.solve:not(.done)').click(function() {
 			$(this).addClass('done');
-			$('.js-number').text(eval(jsNumber)).addClass('done');
-			$('.js-result-box').text(jsNumber + ' = ' + eval(jsNumber)).addClass('done');
+			myFunction().then(
+				$('.js-number').text(eval(jsNumber)).addClass('done'),
+				$('.js-result-box').text(jsNumber + ' = ' + eval(jsNumber)).addClass('done')
+			);
 		});
 
 		$('.keyboard-btn:not(.keyboard-clear)').click(function() {
