@@ -17,14 +17,12 @@
 		head.appendChild(script);
 	}
 	getScript('https://code.jquery.com/jquery-3.4.1.slim.min.js','sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n',function(){
-		var intervalId;
 		var jsNumber;
-		/*var myNumber;*/
 		$('.play').click(function() {
-			var mainNumber = $('.main-number-box .number-box:not(.done)');
-			var singleNumbers = $('.single-numbers-box .number-box:not(.done)');
-			var middleNumber = $('.middle-number-box .number-box:not(.done)');
-			var bigNumber = $('.big-number-box .number-box:not(.done)');
+			mainNumber = $('.main-number-box .number-box:not(.done)');
+			singleNumbers = $('.single-numbers-box .number-box:not(.done)');
+			middleNumber = $('.middle-number-box .number-box:not(.done)');
+			bigNumber = $('.big-number-box .number-box:not(.done)');
 			if ($(this).hasClass('restart')) {
 				$(window).scrollTop(0);
 				$('.keyboard-section').removeClass('show');
