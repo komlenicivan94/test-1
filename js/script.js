@@ -118,7 +118,10 @@
 				dontexist = [];
 				for (let i = 0; i < availableNumbers.length; i++) {
 					if (getOccurrence(usedNumbers, availableNumbers[i]) > getOccurrence(availableNumbers, availableNumbers[i])) {
-						usedTooManyTimes.push('<p>U ponuđenim brojevima nema '+getOccurrence(usedNumbers, availableNumbers[i])+' broja ' + availableNumbers[i] + '</p>');
+						usedTooManyTimesMessage = '<p>U ponuđenim brojevima nema '+getOccurrence(usedNumbers, availableNumbers[i])+' broja ' + availableNumbers[i] + '</p>';
+						if (getOccurrence(usedTooManyTimes, usedTooManyTimesMessage) === 0) {
+							usedTooManyTimes.push(usedTooManyTimesMessage);
+						}
 					}
 				}
 				for (let i = 0; i < usedNumbers.length; i++) {
