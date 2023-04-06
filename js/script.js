@@ -49,9 +49,9 @@
 				);
 			} else if (mainNumber.length > 0) {
 				clearInterval(intervalId);
-				let numCheck = (myNumber.target.toString().split('').reverse()[mainNumber.length-1] === undefined) ? '0' : myNumber.target.toString().split('').reverse()[mainNumber.length-1];
+				numCheck = (myNumber.target.toString().split('').reverse()[mainNumber.length-1] === undefined) ? '0' : myNumber.target.toString().split('').reverse()[mainNumber.length-1];
 				mainNumber.eq(0).text(numCheck).addClass('done');
-				let done = (mainNumber.eq(0).hasClass('done')) ? 1 : 0;
+				done = (mainNumber.eq(0).hasClass('done')) ? 1 : 0;
 				intervalId = window.setInterval(function(){
 					mainNumber.eq(done).text(Math.floor(Math.random() * (9 - 0 + 1) + 0));
 					if (mainNumber.length < (done + 1)) {
@@ -61,7 +61,7 @@
 			} else if (singleNumbers.length > 0) {
 				clearInterval(intervalId);
 				singleNumbers.eq(0).text(myNumber.values.toString().split(',').reverse()[singleNumbers.length-1]).addClass('done');
-				let done = (singleNumbers.eq(0).hasClass('done')) ? 1 : 0;
+				done = (singleNumbers.eq(0).hasClass('done')) ? 1 : 0;
 				intervalId = window.setInterval(function(){
 					singleNumbers.eq(done).text(Math.floor(Math.random() * (9 - 1 + 1) + 1));
 					if (singleNumbers.length < (done + 1)) {
@@ -81,7 +81,7 @@
 				if (!window.matchMedia("(pointer: coarse)").matches) {
 					$('.result').focus().removeClass('done');
 				} else {
-					var keyboardSection = $(window).innerHeight() - $('section.numbers-section').outerHeight(true) - $('section.results-section').outerHeight(true) - 62;
+					keyboardSection = $(window).innerHeight() - $('section.numbers-section').outerHeight(true) - $('section.results-section').outerHeight(true) - 62;
 					if (keyboardSection > 262) {
 						$('main').height(keyboardSection).addClass('done');
 					} else {
@@ -94,24 +94,13 @@
 			} 
 		});
 
-		$(window).resize(function() {
-			if ($('section.keyboard-section').hasClass('show')) {
-				var keyboardSection = $(window).innerHeight() - $('section.numbers-section').outerHeight(true) - $('section.results-section').outerHeight(true) - 62;
-				if (keyboardSection > 262) {
-					$('main').height(keyboardSection);
-				} else {
-					$('main').height(262);
-				}
-			}
-		});
-
 		function getOccurrence(array, value) {
 			return array.filter((v) => (v === value)).length;
 		}
 
-		var allowedInput = [' ','0','1','2','3','4','5','6','7','8','9','+','-','*','/','(',')'];
+		allowedInput = [' ','0','1','2','3','4','5','6','7','8','9','+','-','*','/','(',')'];
 		$('.result').on("focus change keyup paste keypress", function(event) {
-			var input = $(this).val().split("");
+			input = $(this).val().split("");
 			for (let i = 0; i < input.length; i++) {
 				if (getOccurrence(allowedInput, input[i]) === 0) {
 					$(this).val($(this).val().split(' =')[0].replace(input[i],''));
@@ -126,14 +115,14 @@
 
 		$('.submit').click(function() {	
 			try {
-				var targetResult = Number($('.main-number-box .number-box').text());
-				var availableNumbers = [];
+				targetResult = Number($('.main-number-box .number-box').text());
+				availableNumbers = [];
 				$('.number-flex-box:not(.main-number-box) .number-box.done').each(function() {
 					availableNumbers.push($(this).text());  
 				});
-				var usedNumbers = $('.result').val().split(' =')[0].replaceAll('+',' ').replaceAll('-',' ').replaceAll('*',' ').replaceAll('/',' ').replaceAll('(',' ').replaceAll(')',' ').replaceAll('=',' ').split(' ').filter(n => n);
-				var usedTooManyTimes = [];
-				var dontexist = [];
+				usedNumbers = $('.result').val().split(' =')[0].replaceAll('+',' ').replaceAll('-',' ').replaceAll('*',' ').replaceAll('/',' ').replaceAll('(',' ').replaceAll(')',' ').replaceAll('=',' ').split(' ').filter(n => n);
+				usedTooManyTimes = [];
+				dontexist = [];
 				for (let i = 0; i < availableNumbers.length; i++) {
 					if (getOccurrence(usedNumbers, availableNumbers[i]) > getOccurrence(availableNumbers, availableNumbers[i])) {
 						usedTooManyTimes.push('<p>U ponuđenim brojevima nema '+getOccurrence(usedNumbers, availableNumbers[i])+' broja ' + availableNumbers[i] + '</p>');
@@ -144,8 +133,8 @@
 						dontexist.push('<p>Upotrebili ste broj ' + usedNumbers[i] + ' koji ne postoji u ponuđenim brojevima</p>');
 					}
 				}	
-				var result = eval($('.result').val().split(' =')[0]);
-				var numberFound = '';		
+				result = eval($('.result').val().split(' =')[0]);
+				numberFound = '';		
 				$('.error-box-message, .user-number').empty();
 				if (dontexist.length > 0 || usedTooManyTimes.length > 0) {
 					$('.error-box-message').append(dontexist, usedTooManyTimes);
