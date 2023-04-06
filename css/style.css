@@ -8,7 +8,7 @@ body {
     overflow-x: hidden;
     color: #fff;
 	background-color: #399ffd;
-    /*background-image: url(../img/background.webp);*/
+    background-image: url(../img/background.webp);
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 100vh;
@@ -147,7 +147,7 @@ section.numbers-section .row {
 .number-box {
 	width: 60px;
 	height: 60px;
-	background: #0b1168;
+	background: #000546de;
 	border-radius: 5px;
 	border: 2px solid #fff;
 	text-align: center;
@@ -168,7 +168,7 @@ section.numbers-section .row {
 
 /*Results section*/
 .results-section-inner {
-    background: #0b1168;
+    background: #000546de;
     border-radius: 7px;
     position: relative;
     margin: 12px 42px 15px;
@@ -183,6 +183,7 @@ input.result {
     border: none;
     outline: none;
     font-size: 30px;
+    line-height: 37px;
 	font-style: italic;
 	width: 100%;
     padding: 1px 2px;
@@ -200,7 +201,7 @@ input.result.done {
     align-items: center;
     min-height: 100px;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: space-between;
 }
 
 .result-line {
@@ -268,7 +269,7 @@ input.result.done {
 }
 
 .button {
-    background: #0b1168;
+    background: #000546de;
     border: 2px solid #fff;
     border-radius: 4px;
     box-shadow: 0 0 0 2px #0b1168;
@@ -332,7 +333,7 @@ button.keyboard-btn {
     width: calc(25% - 2px);
     flex-grow: 1;
     border-radius: 5px;
-    background: #0b1168;
+    background: #000546de;
     color: #fff;
     line-height: 35px;
     padding: 0;
