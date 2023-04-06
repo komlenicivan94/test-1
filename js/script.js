@@ -1,4 +1,3 @@
-var myNumber;
 (function() {
 	function getScript(url,integrity,success){
 		var script = document.createElement('script');
@@ -19,7 +18,7 @@ var myNumber;
 	}
 	getScript('https://code.jquery.com/jquery-3.4.1.slim.min.js','sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n',function(){
 		var intervalId;
-		
+		var myNumber;
 		$('.play').click(function() {
 			var mainNumber = $('.main-number-box .number-box:not(.done)');
 			var singleNumbers = $('.single-numbers-box .number-box:not(.done)');
@@ -43,9 +42,6 @@ var myNumber;
 				intervalId = window.setInterval(function(){
 					mainNumber.eq(0).text(Math.floor(Math.random() * (9 - 0 + 1) + 0));
 				}, 100);
-				async function myFunction() {
-					return jsNumber = myNumber.solve().best.toString().replaceAll('×','*').replaceAll(' ','');
-				}
 			} else if (mainNumber.length > 0) {
 				clearInterval(intervalId);
 				let numCheck = (myNumber.target.toString().split('').reverse()[mainNumber.length-1] === undefined) ? '0' : myNumber.target.toString().split('').reverse()[mainNumber.length-1];
@@ -79,7 +75,8 @@ var myNumber;
 				$(this).text('Restart').addClass('restart').removeClass('started');
 				if (!window.matchMedia("(pointer: coarse)").matches) {
 					$('.result').focus().removeClass('done');
-				} else {
+				}	
+				if (window.matchMedia("(max-width: 767px)").matches) {
 					var keyboardSection = $(window).innerHeight() - $('section.numbers-section').outerHeight(true) - $('section.results-section').outerHeight(true) - 62;
 					if (keyboardSection > 262) {
 						$('main').height(keyboardSection).addClass('done');
@@ -166,10 +163,8 @@ var myNumber;
 
 		$('.solve:not(.done)').click(function() {
 			$(this).addClass('done');
-			myFunction().then(
-				$('.js-number').text(eval(jsNumber)).addClass('done'),
-				$('.js-result-box').text(jsNumber + ' = ' + eval(jsNumber)).addClass('done')
-			);
+			$('.js-number').text(eval(myNumber.solve().best.toString().replaceAll('×','*'))).addClass('done');
+			$('.js-result-box').text(myNumber.solve().best.toString().replaceAll('×','*').replaceAll(' ','') + ' = ' + eval(myNumber.solve().best.toString().replaceAll('×','*'))).addClass('done');
 		});
 
 		$('.keyboard-btn:not(.keyboard-clear)').click(function() {
