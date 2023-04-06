@@ -1,12 +1,12 @@
 (function() {
 	function getScript(url,integrity,success){
-		var script = document.createElement('script');
-		script.src=url;
-		script.integrity=integrity;
-		script.crossOrigin="anonymous";
-		var head = document.getElementsByTagName('head')[0];
+		script = document.createElement('script');
+		script.src = url;
+		script.integrity = integrity;
+		script.crossOrigin = "anonymous";
+		head = document.getElementsByTagName('head')[0];
 		doneLoad = false;
-		script.onload=script.onreadystatechange = function(){
+		script.onload = script.onreadystatechange = function(){
 		if ( !doneLoad && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete') ) {
 			doneLoad = true;
 			success();
