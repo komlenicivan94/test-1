@@ -123,9 +123,9 @@
 				}
 				for (let i = 0; i < usedNumbers.length; i++) {
 					if (getOccurrence(availableNumbers, usedNumbers[i]) === 0) {
-						message = '<p>Upotrebili ste broj ' + usedNumbers[i] + ' koji ne postoji u ponuđenim brojevima</p>';
-						if (getOccurrence(dontexist, message) === 0) {
-							dontexist.push(message);
+						dontexistMessage = '<p>Upotrebili ste broj ' + usedNumbers[i] + ' koji ne postoji u ponuđenim brojevima</p>';
+						if (getOccurrence(dontexist, dontexistMessage) === 0) {
+							dontexist.push(dontexistMessage);
 						}
 					}
 				}	
