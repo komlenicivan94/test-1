@@ -9,7 +9,7 @@ body {
     color: #fff;
 	background-color: #399ffd;
     background-image: url(../img/background.webp);
-    background-size: cover;
+    background-size: 200vh;
     background-repeat: no-repeat;
     min-height: 100vh;
     touch-action: manipulation;
