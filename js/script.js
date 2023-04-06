@@ -154,8 +154,8 @@
 		})
 
 		$('.solve:not(.done)').click(function() {
-			jsNumber = myNumber.solve().best.toString().replaceAll('×','*').replaceAll(' ','');
 			$(this).addClass('done');
+			jsNumber = myNumber.solve().best.toString().replaceAll('×','*').replaceAll(' ','');
 			$('.js-number').text(eval(jsNumber)).addClass('done');
 			$('.js-result-box').text(jsNumber + ' = ' + eval(jsNumber)).addClass('done');
 		});
