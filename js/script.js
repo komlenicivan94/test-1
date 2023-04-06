@@ -82,8 +82,7 @@
 				$(this).text('Restart').addClass('restart').removeClass('started');
 				if (!window.matchMedia("(pointer: coarse)").matches) {
 					$('.result').focus().removeClass('done');
-				}	
-				if (window.matchMedia("(max-width: 767px)").matches) {
+				} else {
 					var keyboardSection = $(window).innerHeight() - $('section.numbers-section').outerHeight(true) - $('section.results-section').outerHeight(true) - 62;
 					if (keyboardSection > 262) {
 						$('main').height(keyboardSection).addClass('done');
@@ -170,13 +169,8 @@
 
 		$('.solve:not(.done)').click(function() {
 			$(this).addClass('done');
-			/*myFunction().then(
-				function(value) {*/
-					$('.js-number').text(eval(jsNumber)).addClass('done');
-					$('.js-result-box').text(jsNumber + ' = ' + eval(jsNumber)).addClass('done');
-				/*}
-			);*/
-			
+			$('.js-number').text(eval(jsNumber)).addClass('done');
+			$('.js-result-box').text(jsNumber + ' = ' + eval(jsNumber)).addClass('done');
 		});
 
 		$('.keyboard-btn:not(.keyboard-clear)').click(function() {
