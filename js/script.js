@@ -74,7 +74,7 @@
 				if (!window.matchMedia("(pointer: coarse)").matches) {
 					$('.result').focus().removeClass('done');
 				} else {
-					keyboardSection = $(window).innerHeight() - $('section.numbers-section').outerHeight(true) - $('section.results-section').outerHeight(true) - 62;
+					keyboardSection = $(window).innerHeight() - $('section.numbers-section').outerHeight(true) - $('section.results-section').outerHeight(true) - 58;
 					if (keyboardSection > 262) {
 						$('main').height(keyboardSection).addClass('done');
 					} else {
