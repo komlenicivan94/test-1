@@ -92,7 +92,7 @@
 		}
 
 		allowedInput = [' ','0','1','2','3','4','5','6','7','8','9','+','-','*','/','(',')'];
-		$('.result').on("focus change keyup paste keypress", function(event) {
+		$('.result').on("click focus change keyup paste keypress", function(event) {
 			input = $(this).val().split("");
 			for (let i = 0; i < input.length; i++) {
 				if (getOccurrence(allowedInput, input[i]) === 0) {
@@ -115,7 +115,7 @@
 				});
 				usedNumbers = $('.result').val().split(' =')[0].replaceAll('+',' ').replaceAll('-',' ').replaceAll('*',' ').replaceAll('/',' ').replaceAll('(',' ').replaceAll(')',' ').replaceAll('=',' ').split(' ').filter(n => n);
 				usedTooManyTimes = [];
-				dontexist = [];
+				dontExist = [];
 				for (let i = 0; i < availableNumbers.length; i++) {
 					if (getOccurrence(usedNumbers, availableNumbers[i]) > getOccurrence(availableNumbers, availableNumbers[i])) {
 						usedTooManyTimesMessage = '<p>U ponuđenim brojevima nema '+getOccurrence(usedNumbers, availableNumbers[i])+' broja ' + availableNumbers[i] + '</p>';
@@ -126,17 +126,17 @@
 				}
 				for (let i = 0; i < usedNumbers.length; i++) {
 					if (getOccurrence(availableNumbers, usedNumbers[i]) === 0) {
-						dontexistMessage = '<p>Upotrebili ste broj ' + usedNumbers[i] + ' koji ne postoji u ponuđenim brojevima</p>';
-						if (getOccurrence(dontexist, dontexistMessage) === 0) {
-							dontexist.push(dontexistMessage);
+						dontExistMessage = '<p>Upotrebili ste broj ' + usedNumbers[i] + ' koji ne postoji u ponuđenim brojevima</p>';
+						if (getOccurrence(dontExist, dontExistMessage) === 0) {
+							dontExist.push(dontExistMessage);
 						}
 					}
 				}	
 				result = eval($('.result').val().split(' =')[0]);
 				numberFound = '';		
 				$('.error-box-message, .user-number').empty();
-				if (dontexist.length > 0 || usedTooManyTimes.length > 0) {
-					$('.error-box-message').append(dontexist, usedTooManyTimes);
+				if (dontExist.length > 0 || usedTooManyTimes.length > 0) {
+					$('.error-box-message').append(dontExist, usedTooManyTimes);
 					$('.user-number').removeClass('correct').addClass('false');
 				} else if (targetResult === result) {
 					$('.user-number').removeClass('false').addClass('correct');
