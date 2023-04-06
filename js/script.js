@@ -75,8 +75,7 @@
 				$(this).text('Restart').addClass('restart').removeClass('started');
 				if (!window.matchMedia("(pointer: coarse)").matches) {
 					$('.result').focus().removeClass('done');
-				}	
-				if (window.matchMedia("(max-width: 767px)").matches) {
+				} else {
 					var keyboardSection = $(window).innerHeight() - $('section.numbers-section').outerHeight(true) - $('section.results-section').outerHeight(true) - 62;
 					if (keyboardSection > 262) {
 						$('main').height(keyboardSection).addClass('done');
@@ -87,6 +86,7 @@
 				}
 				$('.submit, .solve').removeClass('d-none');
 				$('.bottom-section .row, .btn-section-inner .row').addClass('justify-content-between').removeClass('justify-content-center');
+				jsNumber = myNumber.solve().best.toString().replaceAll('×','*').replaceAll(' ','');
 			} 
 		});
 
@@ -163,8 +163,8 @@
 
 		$('.solve:not(.done)').click(function() {
 			$(this).addClass('done');
-			$('.js-number').text(eval(myNumber.solve().best.toString().replaceAll('×','*'))).addClass('done');
-			$('.js-result-box').text(myNumber.solve().best.toString().replaceAll('×','*').replaceAll(' ','') + ' = ' + eval(myNumber.solve().best.toString().replaceAll('×','*'))).addClass('done');
+			$('.js-number').text(eval(jsNumber)).addClass('done');
+			$('.js-result-box').text(jsNumber + ' = ' + eval(jsNumber)).addClass('done');
 		});
 
 		$('.keyboard-btn:not(.keyboard-clear)').click(function() {
