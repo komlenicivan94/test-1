@@ -356,6 +356,8 @@ button.keyboard-btn-half-width {
 }
 
 .active {
+    -webkit-animation: 0.08s linear 0s 1 normal none running click;
+    -ms-animation: 0.08s linear 0s 1 normal none running click;
     animation: 0.08s linear 0s 1 normal none running click;
 }
 
@@ -478,7 +480,11 @@ button.keyboard-btn {
 }
 }
 
+@-webkit-keyframes click { 100% { -webkit-transform: scale(0.95); } }
+@-ms-keyframes click { 100% { -webkit-transform: scale(0.95); } }
 @keyframes click { 100% { transform: scale(0.95); } }
+
+
 
 .player-image-box.blue-player {
 	background-image: url(../img/avataaars1.svg);
