@@ -125,6 +125,171 @@
 			</div>
 		</div>
 	</section>
+	<section class="settings-section">
+		<div class="settings-section-inner">
+			<div class="settings-box">
+				<div class="settings-label">Ime:</div>
+				<div class="">
+					<input type="text">
+				</div>
+			</div>
+			<div class="settings-box">
+				<div class="settings-label">Igraj kao:</div>
+				<div class="">
+					<span class="play-as-blue" for="PlayAs">Plavi Takmičar</span>
+					<label class="switch">
+						<input name="PlayAs" type="checkbox">
+						<span class="slider round"></span>
+					</label>
+					<span class="play-as-red" for="PlayAs">Crveni Takmičar</span>
+				</div>
+			</div>
+			<div class="settings-box settings-avatar">
+				<div class="settings-label">Izaberi avatara:</div>
+				<div class="">
+					<label class="switch">
+						<input name="Avatar" type="radio" checked>
+						<span class="slider round"></span>
+					</label>
+					<label class="switch">
+						<input name="Avatar" type="radio">
+						<span class="slider round"></span>
+					</label>
+					<label class="switch">
+						<input name="Avatar" type="radio">
+						<span class="slider round"></span>
+					</label>
+					<label class="switch">
+						<input name="Avatar" type="radio">
+						<span class="slider round"></span>
+					</label>
+					<label class="switch">
+						<input name="Avatar" type="radio">
+						<span class="slider round"></span>
+					</label>
+					<label class="switch">
+						<input name="Avatar" type="radio">
+						<span class="slider round"></span>
+					</label>
+				</div>
+			</div>
+			<div class="settings-box">
+				<div class="settings-label">Vreme:</div>
+				<div class="">
+					<span class="time-off" for="TimeSwitch">Iskljuci vreme</span>
+					<label class="switch">
+						<input name="TimeSwitch" type="checkbox">
+						<span class="slider round"></span>
+					</label>
+					<span class="timeOn" for="TimeSwitch">Ukljuci vreme</span>
+				</div>
+			</div>
+			<div class="settings-box">
+				<div class="settings-label">Vrsta Igre:</div>
+				<div class="">
+					<span class="game-type-random" for="GameType">Random brojevi</span>
+					<label class="switch">
+						<input name="GameType" type="checkbox">
+						<span class="slider round"></span>
+					</label>
+					<span class="game-type-input" for="GameType">Unesi svoje broje</span>
+				</div>
+			</div>
+		</div>
+	</section>
+	<style>
+		.settings-box {
+    display: flex;
+    column-gap: 50px;
+    margin-bottom: 20px;
+}
+
+.settings-label {
+    width: 80px;
+}
+
+.settings-section-inner {max-width: 880px;margin: 30px auto 100px;}
+
+.settings-avatar span.slider.round {
+    background-image: url(img/avataaars2.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 80px;
+    height: 80px;
+	display: inline-block;
+}
+.settings-avatar span.slider.round:before {
+    content: '';
+	display: none;
+}
+.settings-avatar label.switch {
+    width: 80px;
+    height: 80px;
+}
+		/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+	</style>
     <script src="js/number-solver.min.js" type="text/javascript"></script>
 	<script src="js/script.js" type="text/javascript"></script>
 </body>
