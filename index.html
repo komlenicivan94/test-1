@@ -239,7 +239,14 @@
 .settings-section {
 	bottom: 0;
     top: unset;
-    height: calc(100% - 20vw - 5px);
+    height: calc(100% - 20vw - 3px);
+}
+
+@media (max-width: 767px) {
+	.settings-section {
+		height: calc(100% - 40vw);
+    	width: 100%;
+	}
 }
 
 .slide {
@@ -298,7 +305,11 @@ input[type="text"][name="Name"] {
     width: 80px;
 }
 
-.settings-section-inner {max-width: 880px;margin: 30px auto 100px;}
+.settings-section-inner {
+	max-width: 880px;
+	margin: 30px auto;
+}
+
 
 [avatar="avatar_1"] {
     background-image: url(img/avataaars1.svg);
