@@ -604,11 +604,11 @@ margin: 20px auto 10px;
 
 
 [avatar="avatar_1"] {
-background-image: url(img/avataaars1.svg);
+background-image: url(../img/avataaars1.svg);
 }
 
 [avatar="avatar_2"] {
-background-image: url(img/avataaars2.svg);
+background-image: url(../img/avataaars2.svg);
 }
 
 .settings-avatar span.slider.round {
