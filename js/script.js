@@ -181,5 +181,46 @@
 				$(this).removeClass('active');
 			});
 		});
+
+		//Set name
+		$('input[name="Name"]').on("change keyup paste keypress", function(event) {
+			input = $(this).val();
+			localStorage.setItem("name", input);
+		});
+		userName = localStorage.getItem("name");
+		if (userName !== null) {
+			$('input[name="Name"]').val(userName)
+		}
+
+		//Set avatar
+		$('input[name="Avatar"]').on('click change', function(e) {
+			localStorage.setItem("avatar", this.value);
+			$('.player-image-box.blue-player').attr('avatar',this.value)
+		});
+		avatar = localStorage.getItem("avatar");
+		if (avatar !== null) {
+			$('.player-image-box.blue-player').attr('avatar',avatar);
+			$('input[value='+avatar+']').prop("checked", true);
+		}
+
+		//Set side
+		$('input[name="PlayAs"]').on('change', function(e) {
+			localStorage.setItem("play-as", this.checked);
+			if (this.checked) {
+				$('.top-section .row, .result-line').addClass('reverse')
+			} else {
+				$('.top-section .row, .result-line').removeClass('reverse')
+			}
+		});
+		playAs = localStorage.getItem("play-as");
+		$('input[name="PlayAs"]').prop("checked", JSON.parse(playAs));
+		if (JSON.parse(playAs)) {
+			$('.top-section .row, .result-line').addClass('reverse')
+		}
+
+
+		$('.settings-toggle').click(function() {
+			$('.settings-section').toggleClass('slide')
+		})
 	});
 })();

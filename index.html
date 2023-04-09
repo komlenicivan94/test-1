@@ -13,13 +13,15 @@
 	<section class="top-section">
 		<div class="container-fluid">
 			<div class="row">
-				<div class="player-image-box blue-player"></div>
+				<div class="player-image-box blue-player" avatar="avatar_1">
+					<img class="settings-toggle" src="img/settings.svg" alt="settings">
+				</div>
 				<div class="time-box">
 					<div class="timebox-bar">
 						<div class="timebox-bar-progress"></div>
 					</div>
 				</div>
-				<div class="player-image-box red-player"></div>
+				<div class="player-image-box red-player" avatar="avatar_2"></div>
 			</div>
 		</div>
 	</section>
@@ -126,11 +128,12 @@
 		</div>
 	</section>
 	<section class="settings-section">
+		<img class="settings-toggle" src="img/settings.svg" alt="settings">
 		<div class="settings-section-inner">
 			<div class="settings-box">
 				<div class="settings-label">Ime:</div>
 				<div class="">
-					<input type="text">
+					<input name="Name" type="text">
 				</div>
 			</div>
 			<div class="settings-box">
@@ -146,30 +149,30 @@
 			</div>
 			<div class="settings-box settings-avatar">
 				<div class="settings-label">Izaberi avatara:</div>
-				<div class="">
+				<div class="avatar-flex-box">
 					<label class="switch">
-						<input name="Avatar" type="radio" checked>
-						<span class="slider round"></span>
+						<input name="Avatar" type="radio" value="avatar_1" checked>
+						<span class="slider round" avatar="avatar_1"></span>
 					</label>
 					<label class="switch">
-						<input name="Avatar" type="radio">
-						<span class="slider round"></span>
+						<input name="Avatar" type="radio" value="avatar_2">
+						<span class="slider round" avatar="avatar_2"></span>
 					</label>
 					<label class="switch">
-						<input name="Avatar" type="radio">
-						<span class="slider round"></span>
+						<input name="Avatar" type="radio" value="avatar_3">
+						<span class="slider round" avatar="avatar_3"></span>
 					</label>
 					<label class="switch">
-						<input name="Avatar" type="radio">
-						<span class="slider round"></span>
+						<input name="Avatar" type="radio" value="avatar_4">
+						<span class="slider round" avatar="avatar_4"></span>
 					</label>
 					<label class="switch">
-						<input name="Avatar" type="radio">
-						<span class="slider round"></span>
+						<input name="Avatar" type="radio" value="avatar_5">
+						<span class="slider round" avatar="avatar_5"></span>
 					</label>
 					<label class="switch">
-						<input name="Avatar" type="radio">
-						<span class="slider round"></span>
+						<input name="Avatar" type="radio" value="avatar_6">
+						<span class="slider round" avatar="avatar_6"></span>
 					</label>
 				</div>
 			</div>
@@ -192,17 +195,97 @@
 						<input name="GameType" type="checkbox">
 						<span class="slider round"></span>
 					</label>
-					<span class="game-type-input" for="GameType">Unesi svoje broje</span>
+					<span class="game-type-input" for="GameType">Unesi brojeve</span>
 				</div>
 			</div>
 		</div>
 	</section>
 	<style>
+	img.settings-toggle {
+		width: 50px;
+		padding: 10px;
+		position: absolute;
+    	z-index: 1;
+		cursor: pointer;
+		filter: invert(1);
+	}
+
+	.settings-section .settings-toggle {
+		right: 5px;
+    	top: 5px;
+	}
+
+	.settings-section {
+	display: block!important;
+    left: unset;
+    right: 0;
+    height: 100vh;
+    top: -3px;
+    width: 340px;
+    position: fixed;
+    border-radius: 0;
+	padding: 20px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 1;
+    background-color: #0d1c5e;
+    -webkit-transition: .4s;
+    transition: .4s;
+    -webkit-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    transform: translateX(100%);
+}
+
+.slide {
+	-webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+}
+
+.settings-label {
+    display: none !important;
+}
+
+input[type="text"][name="Name"] {
+    background: none;
+    box-shadow: none;
+    border: 1px solid #fff;
+    width: 100%;
+	color: #fff;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 30px;
+}
+
+.settings-box .avatar-flex-box {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+.settings-box span:not(.slider) {
+    width: 120px;
+    display: inline-block;
+}
+
+.settings-box > div[class] {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+}
+
+.settings-box span:not(.slider):first-child {
+    text-align: right;
+}
+
 		/*$('input[name="Avatar"]:checked').val()*/
 		.settings-box {
     display: flex;
     column-gap: 50px;
     margin-bottom: 20px;
+	justify-content: center;
 }
 
 .settings-label {
@@ -211,8 +294,15 @@
 
 .settings-section-inner {max-width: 880px;margin: 30px auto 100px;}
 
-.settings-avatar span.slider.round {
+[avatar="avatar_1"] {
+    background-image: url(img/avataaars1.svg);
+}
+
+[avatar="avatar_2"] {
     background-image: url(img/avataaars2.svg);
+}
+
+.settings-avatar span.slider.round {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -234,6 +324,7 @@
   display: inline-block;
   width: 60px;
   height: 34px;
+  margin: 0;
 }
 
 /* Hide default HTML checkbox */

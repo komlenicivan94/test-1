@@ -488,11 +488,6 @@ button.keyboard-btn {
 @-ms-keyframes click { 100% { -webkit-transform: scale(0.95); } }
 @keyframes click { 100% { transform: scale(0.95); } }
 
-
-
-.player-image-box.blue-player {
-	background-image: url(../img/avataaars1.svg);
-}
-.player-image-box.red-player {
-	background-image: url(../img/avataaars2.svg);
+.reverse {
+    flex-direction: row-reverse;
 }
