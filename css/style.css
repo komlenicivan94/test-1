@@ -502,6 +502,10 @@ img.settings-toggle {
     filter: invert(1);
 }
 
+.reverse img.settings-toggle {
+    right: 0;
+}
+
 .settings-section .settings-toggle {
     right: 5px;
     top: 5px;
@@ -584,6 +588,7 @@ column-gap: 15px;
 .settings-box span:not(.slider):first-child {
 text-align: right;
 }
+
 
     /*$('input[name="Avatar"]:checked').val()*/
     .settings-box {
